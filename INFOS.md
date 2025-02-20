@@ -50,3 +50,16 @@ A PARTE QUE FALTA
 Cabeçalho (<head>): recebe as informaçãoes que serão utilizadas pelos mecanismos de busca e outras configurações de comportamento da página
 
 Body (<body>): É a parte que recebe todo o conteúdo visível, e até mesmo código JavaScript
+
+==========================================================================================================================
+==========================================================================================================================
+LISTAS
+==========================================================================================================================
+
+Existem três tipos de listas: ordenadas (<ol>), não ordenadas (<ul>), e de definição (<dl>).
+
+<ul></ul> Inicia a lista não ordenada
+<ol></ol> Inicia a lista ordenada
+<li></li> Item da lista
+<dl></dl> Inicia uma lista de definição
+<dd></dd> Descrição da definição
