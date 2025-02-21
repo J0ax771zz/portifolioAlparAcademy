@@ -63,3 +63,23 @@ Existem três tipos de listas: ordenadas (<ol>), não ordenadas (<ul>), e de def
 <li></li> Item da lista
 <dl></dl> Inicia uma lista de definição
 <dd></dd> Descrição da definição
+
+==========================================================================================================================
+==========================================================================================================================
+Tabelas
+==========================================================================================================================
+
+As tabelas servem para exibir dados aos usuário.
+
+Eram muito utilizadas na estrutura dos sites no passado, Hoje ainda estão presentes, mas apenas para o seu real propósito.
+
+Mas com o CSS, a maioria dos sites hoje é desenvolvido com o conceito tableless (sem tabela).
+
+As tabelas possues suas próprias tags, mas podem ser combinadas com as tags de conteúdo.
+
+<table></table> Inicia a tabela
+<thead></thead> Define o cabeçalho de uma tabela
+<tbody></tbody> Define o corpo da tabela
+<tr></tr> Table Row, Define uma linha de uma tabela
+<th></th> Table Heading, Define uma celúla de cabeçalho da coluna da tabela
+<td></td> Table Data, Define uma célula da coluna da tabela
