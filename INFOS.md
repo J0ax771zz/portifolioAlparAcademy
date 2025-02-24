@@ -83,3 +83,24 @@ As tabelas possues suas próprias tags, mas podem ser combinadas com as tags de 
 <tr></tr> Table Row, Define uma linha de uma tabela
 <th></th> Table Heading, Define uma celúla de cabeçalho da coluna da tabela
 <td></td> Table Data, Define uma célula da coluna da tabela
+
+
+==========================================================================================================================
+==========================================================================================================================
+Formulários
+==========================================================================================================================
+
+São a base essencial da internet e dos sites atualmente.
+
+O preenchimento dos formulários geram dados, que serão convertidos em informações.
+
+Onde há interação entre o usuário e o site, o formulário está presente.
+Seja em um login, seja enviando uma mensagem pelo WhatsApp.
+
+Tags de formulário:
+
+"<form></form>" Define a área do formulário, e recebe todos os campos.
+"<input />" É a forma que o usuário interage com o sistema.
+"<textarea></textarea>" É similiar ao input, mas permite maior quantidade de texto
+"<select></select>" Input para a seleção de lista
+"<button></button>" Botão que envia o formulário para o sistema.
