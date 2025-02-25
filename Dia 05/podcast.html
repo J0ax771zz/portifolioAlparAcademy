@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Growth</title>
+  </head>
+  <body style="margin: 0; padding: 0; font-family: Arial, sans-serif">
+    <table 
+      width="100%"
+      align="center"
+      style="text-align: center; background: rgb(219, 218, 218);"
+    >
+      <tr>
+        <td colspan="4">
+          <img src="./assets/logo.png" alt="" width="150px" align="center" style=" border: 5px solid rgb(99, 250, 255);border-radius: 100px"/>
+        </td>
+      </tr>
+      <tbody>
+      <tr>
+        <td><a href="#inicio" style="font-size: 20px; color: black; text-decoration: none;">Inicio</a></td>
+        <td><a href="#episodio" style="font-size: 20px; color: black; text-decoration: none;">Episódio</a></td>
+        <td><a href="#comentarios" style="font-size: 20px; color: black; text-decoration: none;">Comentários</a></td>
+        <td><a href="#contato" style="font-size: 20px; color: black; text-decoration: none;">Contato</a></td>
+      </tr>
+      </tbody>
+    </table>
+
+
+      <div id="inicio" style="max-width: 60%; margin-top: 40px; background: rgb(99, 250, 255); padding: 5px; border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;">
+
+          <h1>No Episódio de hoje:</h1>
+          <p>
+            Falaremos sobre a Alpar Services e seu programa de capcitação o
+            Rocket Program 2.0 <br />
+            Apresentado por dois participantes do programa João e Gustavo, vamos
+            descobrir como funciona este programa <br />
+            O que aprendem, Como aprendem e muito mais.
+            <strong
+              >Assista este episódio completo somente aqui na Tech Growth
+              Podcast</strong>
+          </p>
+    </div>
+    
+    <h1 style="margin-top: 08%; text-align: center;">Assista o episódio completo aqui!</h1>
+
+    <div id="episodio" align="center">
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/WzqcQi6WIws?si=soNeu-YBWoTyGYrh"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+        <br>
+        <p>Gostou do vídeo ou se interessou pela oportunidade?<br> Então fique de olho no perfil da Alpar no LinkedIn <br>
+        E se prepare para as próximas oportunidades que podem vir <br> Abaixo deixamos também alguns comentário que merecem sua atenção </p> <br>
+        <a style="padding-right: 15px;" href="https://alpar.com.br/">
+            <img src="./assets/alpar-logo.png" alt="link para o site da Alapar" width="50px"></a>
+        <a href="https://www.linkedin.com/company/alparbr/">
+        <img src="./assets/linkedin.png" alt="link para o linkedIn da Alapar" width="50px"></a>
+    </div>
+
+    <div id="comentarios" align="center" style="margin-top: 5%;">
+        <h2>Sem tempo? Sem problema</h2>
+        <p>Deixamos 2(dois) aúdios dos participantes<br>Falando um pouco sobre a Alpar e o Rocket Program</p>
+        
+        <div>
+            <p>João: Como funciona o Rocket Program</p>
+            <audio controls src="./assets/audioJoao.ogg" type="audio/mp4"></audio>
+        </div>
+        <br>
+        <div>
+            <p>Gustavo: Conheça um pouco sobre a Alpar</p>
+            <audio controls src="./assets/audioGustavo.ogg" type="audio/mp4"></audio>
+        </div>
+    </div>
+
+    <div
+     id="contato"
+     align="center"
+     style="margin-top: 02%; margin-bottom: 02%;  margin-left: 30%; max-width: 40%; border: 3px solid rgb(99, 250, 255); border-radius: 05%; background: rgb(13, 222, 230);">
+        <h2>Gostou do conteúdo? Ou quer entrar em contato</h2>
+        <p>Preencha o formulário abaixo:</p>
+
+        <form >
+            <label for="nome">
+                Informe seu nome:
+                <input type="text" id="nome" placeholder="Digite seu nome completo: " required>
+            </label>
+            <br><br>
+            <label for="email">
+                Informe seu E-mail:
+                <input type="email" id="email" placeholder="Digite seu E-mail: " required>
+            </label>
+            <br><br>
+            <label for="telefone">
+                Informe seu Telefone:
+                <input type="tel" id="telefone" placeholder="Digite seu telefone: ">
+            </label>
+            <br><br>
+            <label for="assunto">
+                Informe o assunto:
+                <input type="text" id="assunto" placeholder="Descreva brevemente o assunto: " required>
+            </label>
+            <br><br>
+            <label for="mensagem">
+                <p>Digite a mensagem que deseja enviar</p>
+                <textarea name="mensagem" id="mensagem" required></textarea>
+            </label>
+            <br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <footer align="center" width="100%" style=" height: 50px; padding: 02px; background: rgb(219, 218, 218);">
+      <h3>© Tech Growth - 2025 Todos os direitos reservados</h3>
+    </footer>
+  </body>
+</html>
