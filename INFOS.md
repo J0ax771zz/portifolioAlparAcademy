@@ -1,3 +1,6 @@
+==========================================================================================================================
+CURSO 1: HTML
+==========================================================================================================================
 HISTORIA DO HTML
 ==========================================================================================================================
 
@@ -117,3 +120,83 @@ Para isso, usamos a tag <div>, que cria um container, onde podemos incluir eleme
 
 Quando temos um encadeamento de divs, a <div> mais externa é chamada de div parent (pai).
 Consequentemente, as divs internas são chamadas de div filhas.
+
+==========================================================================================================================
+CUSO 2: CSS
+==========================================================================================================================
+CSS
+==========================================================================================================================
+
+CSS Significa Cascading Style Sheets (Folhas em Estilo de Cascata), e serve para estilizar os arquivos HTML.
+
+O CSS possui diversas configurações de estilo que são escritas uma abaixo da outra. O nome "cascata" vem dessa
+configuração.
+
+Como o CSS funciona? Atráves de seletores, propriedade e valor.
+
+Exemplo: seletor{
+    propriedade: valor;
+}
+
+Seletor: Os seletores buscam pelos elementos HTML.
+Propriedade: As propriedades definem os estilos que serão implementados.
+Valor: Os valores definem os estilos que serão implementados.
+
+O CSS foi proposto pela primeira vez em 1994 por Håkon Wium Lie.
+E o proposito desta ferramenta é deixar os sites mais bonitos e estilizados.
+
+==========================================================================================================================
+Formas de inserção:
+
+Inline: O CSS é feito diretamente no elemento, também utilizando o style, mas como atributo.
+
+<p style="color: red;">Texto</p>
+
+Interno: O CSS é feito na mesma página do HTML, inserindo as tags <style></style> no head da página.
+
+Externo: O CSS é feito em um documento à parte, e inserido no head do HTML da página que será inserido, usando o elemento
+<link rel="stylesheet" href="./style.css">
+
+
+==========================================================================================================================
+TEXTOS
+
+Font-Size: Essa propriedade determina o tamanho que a fonte será exibida.
+O tamanho padrao é 16 pixels, especificado no documento como px.
+
+Existem ainda outras formas de determinar o tamanho de uma fonte, como pela porcentagem (%), centímetros (cm), milímetros(mm), ou ainda por pontos (pt).
+
+Pontos inclusive, é a medida utilizada no Microsoft Word.
+
+Font-Weight: o font weight determina o peso da fonte. Ou seja, quão fina ou grossa é a linha da fonte.
+Podemos trabalhar com valores basais como bold (negrito), ou regular (normal).
+Mas é possível especificar a grossura da fonte utilizando números também, que podem variar entre 100 e 900
+
+100 - extremamente fina
+400 - regular
+700 - negrito
+
+Text-Align: O text-align determina o alinhamento do texto, podendo ser:
+
+text-align: center; //texto ao centro
+text-align: left; //texto a esquerda
+text-align: right; //texto a direita
+text-align: justify; //texto justificado
+
+Text-Decoration: O text-decoration determina as linhas do texto, podendo ser:
+
+text-decoration: underline; //linha abaixo do texto
+text-decoration: line-through; //linha no meio
+text-decoration: overline; //linha acima do texto
+
+E os elementos pode ser usados todos juntos.
+
+Text-Ident: o text-ident determina a indentação do texto que é afastar o texto da margem. A especificação é dada em pixels(px)
+
+text-indent: 50px;
+
+Color: o color determina a cor do texto, podendo ser:
+
+color #FF0000; (hexadecimal)
+color: red; (nome da cor)
+color: rgb (255,0,0); (RGB)
