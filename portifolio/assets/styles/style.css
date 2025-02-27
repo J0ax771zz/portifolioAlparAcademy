@@ -50,6 +50,7 @@ main.apresentacao img {
 
 main.apresentacao section{
     justify-self: center;
+    margin-left: 15px;
 }
 
 main.apresentacao section h1{
@@ -115,7 +116,8 @@ section.projects::-webkit-scrollbar{
     width: 80%;
     height: 12px;
     background-color: orange;
-    border-radius: 6px
+    border-radius: 6px;
+    cursor: pointer;
     
 }
 
@@ -123,6 +125,7 @@ section.projects::-webkit-scrollbar{
     width: 10%;
     background-color: black;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 section.projects a{
