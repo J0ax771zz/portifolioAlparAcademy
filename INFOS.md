@@ -200,3 +200,85 @@ Color: o color determina a cor do texto, podendo ser:
 color #FF0000; (hexadecimal)
 color: red; (nome da cor)
 color: rgb (255,0,0); (RGB)
+========================================================================================================================
+DISPLAY
+
+Inline: é o display que conduz os textos, permitindo que os elementos sejam exibidos na mesma linha, Padrão para elementos como <span>, <button>, <inputd> e <a>.
+
+Block: É o display que coloca os conteúdos em blocos. Padrão para elementos como <div>, <p> e <h1>. O block permite que configuremos a altura e a largura dos elementos.
+
+Flex e Grid: São dois tipos de block, mas o flex exibe as informações do bloco na horizontal, enquanto o grid exibe as informações do bloco na vertical.
+
+Inline-Block: o inline-block mistura as propriedades do inline e do block, permitindo que textos sejam colocados em 
+blocos com dimensionamento de altura e largura.
+
+========================================================================================================================
+MARGIN
+
+Margin determina o espaçamento em volta da caixa.
+
+A margem pode ser definida de modo único, que reflete em todos os lados da caixa, mas também podemos definir especificando a margem de cada lado de forma direta, ou de forma indireta.
+
+margin: 50px;
+
+Forma indireta:
+seguindo a ordem: top, right, bottom e left.
+margin: 10px 20px 30px
+
+Forma direta: 
+margin-top: 10px;
+margin-bottom: 30px;
+margin-left: 20px;
+
+c
+PADDING
+
+O padding é como o margin, mas trabalha o espaçamento interno da caixa.
+
+Inclusive, pode ser definido de modo único, e também ser especificado de forma direta ou indireta.
+
+padding: 50px;
+
+Forma indireta:
+seguindo a ordem: top, right, bottom e left.
+padding: 10px 20px 30px;
+
+Forma direta:
+padding-top: 10px;
+padding-bottom: 30px;
+padding-left: 20px;
+
+========================================================================================================================
+LEMBRE-SE
+
+O MARGIN SERVE PARA ESPAÇAMENTO EXTERNO DA CAIXA, JÁ O PADDING SERVE APENAS PARA ESPAÇAMENTO INTERNO.
+
+========================================================================================================================
+BORDER
+
+Border cuida do espaço "no meio", entre o margin e o padding.
+A propriedade permite que definamos sua espessura, cor e forma, também de forma direta ou indireta.
+
+Forma indireta:
+border: 5px solid red;
+
+Forma direta:
+border-color: red;
+border-width: 5px; Todas as bordas
+border-style: solid;
+border-top: 50px; Cada lado especifico
+
+========================================================================================================================
+BACKGROUND
+
+O backgorund cuida do comportamento do fundo do nosso site.
+
+Como nos demais elementos, podemos trabalhar de forma mais especifica, e de forma indireta.
+
+Forma indireta: 
+background: red;
+
+Forma direta:
+background-color: red(255,000,000);
+background-image: url(link da imagem);
+background: linear-gradient(red,blue);
