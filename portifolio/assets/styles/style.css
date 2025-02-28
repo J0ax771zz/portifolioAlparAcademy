@@ -121,7 +121,6 @@ section.projects::-webkit-scrollbar{
     background-color: orange;
     border-radius: 6px;
     cursor: pointer;
-    
 }
 
 ::-webkit-scrollbar-thumb{
