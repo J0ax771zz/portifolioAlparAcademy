@@ -282,3 +282,21 @@ Forma direta:
 background-color: red(255,000,000);
 background-image: url(link da imagem);
 background: linear-gradient(red,blue);
+
+
+========================================================================================================================
+POSITION
+
+Static: É a posição padrçao, os Elementos são posicionados de acordo com a renderização, e não sçai afetados pela propriedades de posicionamento left, right, top e bottom.
+
+Relative: Define o posicionamento baseado na posição atual.
+Com o relative, podemos utilizar as propriedades de posicionamento que mencionamos acima (left, right, top e bottom);
+
+Absolute: Define o posicionamento relacionamento relacionado ao primeiro elemento ancestral não estatico na página.
+Ou seja, o elemento ancestral precisa ter um position definido, ou o body será usando como paramêtro.
+
+Fixed: Diferente do absolute, esse posicionamento  fixa o elemento na tela, mas referente ao viewport, que é conhecido
+como a tela do usuário.
+
+Sticky: Esse posicionamento funciona como uma mistura do static e do fixed, iniciando estático, e se movendo enquanto
+acompanha o scroll na página

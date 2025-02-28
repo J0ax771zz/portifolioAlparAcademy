@@ -15,6 +15,9 @@ header {
     padding: 10px;
     background-color: orange;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header nav.navbar {
@@ -37,7 +40,7 @@ header nav.navbar a:hover {
 main.apresentacao {
     width: 60%;
     display: flex;
-    margin-top: 10%;
+    margin-top: 12%;
     justify-self: center;
     justify-content: space-between;
 }
