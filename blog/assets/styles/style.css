@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 2000px;
+}
+header {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.199);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    & img{
+        width: 100px;
+        border-radius: 50%;
+        border: 3px solid rgb(78, 78, 255);
+
+    }
+    & .itens{
+        display: flex;
+        align-items: center;
+        & a {
+            text-align: center;
+            font-size: 16pt;
+            margin-right: 18px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        & a:hover {
+            color: rgb(78, 78, 255);
+            text-decoration: underline;
+            font-size: 24px;
+            padding: 10px;
+        }
+    }
+}
+section.home{
+    width: 100%;
+    height: 500px;
+    margin-top: 10%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../img/Computer\ Network\ Internet\ GIF\ by\ Butlerm.gif");
+    align-content: center;
+    & h2 {
+        width: 30%;
+        color: white;
+        text-align:left;
+        font-size: 24pt;
+        padding: 15px;
+        margin-left: 50px;
+        & strong{
+            color: rgb(78, 78, 255);
+        }
+    }
+}
+section.anuncio-podcast-rocket {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    background-color: rgb(212, 210, 210);
+    align-content: center;
+    padding: 20px;
+    & .tittle-podcast-anuncio {
+        color: rgb(78, 78, 255);
+        font-size: 22pt;
+        margin-bottom: 30px;
+        & h3 {
+            color: rgb(78, 78, 255);
+            font-size: 18pt;
+        }
+    }
+    & .text-podcast-anuncio {
+        font-size: 16pt;
+        text-align: left;
+    }
+    & #change{
+        font-size: 18pt;
+        margin-top: 10px;
+        margin-bottom: 05px;
+    }
+    & button {
+        width: 170px;
+        height: 40px;
+        margin-top: 10px;
+        font-size: 16pt;
+        border-radius: 15px;
+        background-color: rgb(78, 78, 255);
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: 05px 05px 3px rgba(0, 0, 0, 0.233);
+    }
+    & .podcast-anuncio{
+        align-content: center;
+        & img {
+            width: 450px;
+            height: 450px;
+            margin-left: 100px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
+        }
+    }
+}
+section.posts {
+    width: 80%;
+    margin: 0 auto;
+    height: 450px;
+    margin-top: 70px;
+    & article {
+        text-align: center;
+        & h2 {
+            font-size: 24pt;
+            color: rgb(78, 78, 255);    
+        }
+        & p {
+            font-size: 16pt;
+        }
+    }
+}
+section.posts div.post {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & a {
+        width: 250px;
+        height: 200px;
+        font-size: 18pt;
+        margin-bottom: 30px;
+        color: white;
+        align-content: center;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 30px;
+        background-color: rgb(78, 78, 255);
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
+    }
+    & a:hover {
+        border: 3px solid rgb(78, 78, 255);
+        background-color: white;
+        color: rgb(78, 78, 255);
+        box-shadow: 15px 15px 10px rgba(78, 78, 255, 0.399);
+    }
+}
+
