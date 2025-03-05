@@ -31,6 +31,7 @@ header {
 header nav.navbar {
     padding-top: 30px;
     font-size: 25px;
+    flex-wrap: wrap;
 }
 
 header nav.navbar a {

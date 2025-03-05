@@ -300,3 +300,110 @@ como a tela do usuário.
 
 Sticky: Esse posicionamento funciona como uma mistura do static e do fixed, iniciando estático, e se movendo enquanto
 acompanha o scroll na página
+
+========================================================================================================================
+FLEXBOX E GRID
+
+Flexbox e Grid oferecem muitos beneficíos para o design de layouts em CSS.
+
+O Flexbox simplifica a criação de layouts unidimensionais, proporcionando flexibilidade, alinhamento fácil e ajustes automáticos para dispositivos variados. Por outro lado, usar o Grid é ideal para layouts bidimensionais complexos
+oferecendo controle preciso sobre linhas, colunas e espaçamento.
+
+Ambos são ferramentas essenciais para desenvolvedores front-end, permitindo layouts responsivos, adaptáveis e visualmente equilibrados em diferentes contextos.
+
+O Flexbox e o Grid são como os assistentes de organização do seu design. Eles tornam mais fácil do que nunca criar layouts fluidos e proporcionar uma experiência incrível em qualquer dispositivo, e lembrando você pode combinar isso
+com o @media (fará sentido mais a diante).
+
+
+========================================================================================================================
+FLEXBOX
+
+O Flexbos é um elemento flexível, que ativa diversas configurações aplicáveis para os elementos filho, podendo manipular suas alturas e larguras.
+
+Para ativá-lo, usamos a propriedade display: flex;
+e suas configurações são:
+
+Flex-Direction: Essa propriedade define a direção que o conteúdo será mostrado. Por padrão, os conteúdos são exibidos em linha, mas podem ser exibidos como:
+
+row: //Conteúdo exibido em linha
+column: //Conteúdo exibido em coluna
+row-reverse //Conteúdo exibido em linha, mas da direitra pra esquerda e na ordem inversa
+column-reverse: //Conteúdo exibido em coluna, mas com as informações de baixo para cima e na ordem inversa
+
+Flex-Wrap : O flex-wrap permite ativar o desativar a quebra de linha, impedindo que uma nova linha seja criada, caso os elementos extrapolem o tamanho do site, evitando a quebra de layout.
+Podemos usar as propriedades:
+
+wrap: 
+nowrap
+
+Flex-Flow: o flex-flow permite a configuração do flex-direction e do flex-wrap ao mesmo tempo.
+
+========================================================================================================================
+JUSTIFY-CONTENT
+
+Essa propriedade alinha os itens no eixo escolhido, seja vertical ou horizontal.
+
+Esse alinhamento pode ser definido de acordo com a necessidade, trabalhando com as seguintes opções:
+
+flex-start: alinha o conteúdo no início
+flex-end: alinha o conteúdo ao final 
+center: alinha o conteúdo ao centro
+space-around: coloca um espeço entre cada elemento, incluindo as bordas, mas somando os espaçamentos.
+space-between: separa os conteúdos igualmente, sem contar as bordas
+space-evenly: separa o conteúdo igualmente, incluindo as bordas.
+stretch: expande o conteúdo, de modo a preencher o container
+
+
+========================================================================================================================
+ALIGN-ITEMS
+
+Essa propriedade alinha os itens no eixo cruzado. Ou seja, se o container for row, os itens serão alinhados na vertical, e se o container for column, os itens serão alinhados na horizontal.
+
+Esse alinhamento pode ser definido de acordo com a necessidade, trabalhando com as seguintes opções:
+
+flex-start: alinha o conteúdo no início
+flex-end: alinha o conteúdo no final
+center: alinha o conteúdo ao centro
+stretch: expande o conteúdo, de modo a preencher o container
+
+========================================================================================================================
+GAP
+
+Essa prpriedade define o espaçamento de cada item, seja para linhas ou para colunas.
+
+Aqui podemos trabalhar com valores, podendo selecionar a unidade de medida que desejarmos (porcentagem, px, cm, etc).
+
+Da mesma forma que trabalhamos com o padding, podemos determinar valores diretos e indiretos.
+
+forma indireta:
+gap: 10px;
+
+forma direta:
+row-gap: 10px;
+column-gap: 30px;
+
+========================================================================================================================
+FLEX-BASIS
+
+Essa propriedade define tamanho inicial do item em relação ao espaço disponivel.
+
+Caso elemento não seja flexível, a prrpriedade não fará efeito.
+
+========================================================================================================================
+FLEX-GROW
+
+Essa propriedade faz com que os itens cresçam, de acordo com o número definido pela direção do container, a partir do flex-basis.
+O valor padrão é 1.
+
+========================================================================================================================
+FLEX-SHRINK
+
+Essa propriedade faz com que os itens diminuam de acordo com o número definido pela direção do container, a partir do flex-basis.
+
+========================================================================================================================
+FLEX
+
+É um atalho para as três propriedades, e os valores dever ser definidos na ordem flex-grow, flex-shrink, flex-basis.
+
+flex: 1 1 auto;
+
