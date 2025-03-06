@@ -407,3 +407,14 @@ FLEX
 
 flex: 1 1 auto;
 
+
+========================================================================================================================
+GRID
+
+O grid é uma forma de display, colocando a visualização em formato de grade.~
+
+Para desenvolvermos um grid, tralhamos com as propriedades de template, que definirão a quantidade de linhas (grid-template-rows) e de colunas (grid-template-columns).
+
+Também podemos usar as unidades de medida que já conhecemos, mas aqui podemos usar até uma nova chamada fr (fraction) que, da mesma forma que o flex-grow, define uma porcentagem para cada elemento.
+
+Para trabalharmos com valores automáticos de dimensionamento do grid, podemos ainda usar as propriedades grid-auto-columns e grid-auto-rows
