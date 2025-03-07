@@ -418,3 +418,23 @@ Para desenvolvermos um grid, tralhamos com as propriedades de template, que defi
 Também podemos usar as unidades de medida que já conhecemos, mas aqui podemos usar até uma nova chamada fr (fraction) que, da mesma forma que o flex-grow, define uma porcentagem para cada elemento.
 
 Para trabalharmos com valores automáticos de dimensionamento do grid, podemos ainda usar as propriedades grid-auto-columns e grid-auto-rows
+
+
+========================================================================================================================
+TRANSFORM
+
+Essa propriedade permite aplicar transformações aos elementos, permitindo definições de rotação, escala, translação e deformação.
+
+O transform não afeta o layout da página, apenas a apresentação visual do elemento, permitindo que múltiplicas transformações possam ser combinadas, para criar elementos mais complexos.
+
+Rotate: Essa propriedade faz o elemento rotacionar a quantidade de graus determinado.
+Exemplo: transform: rotate(45deg);
+
+Escala (Ou zoom): Essa propriedade faz o item aumentar x vezes.
+Exemplo: transform: scale(1.5);
+
+Translate: Essa propriedade faz com que os itens se desloquem.
+Exemplo: transform: translate(20px, 30px);
+
+Skew: Essa propriedade deforma os elementos.
+Exemplo: transform: skew(20deg, 10deg);
