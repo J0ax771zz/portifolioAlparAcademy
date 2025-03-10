@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    ::selection{
+        color: black;
+        background: #4e4eff;
+    }
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -66,7 +70,7 @@ section.home{
 section.anuncio-podcast-rocket {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: 500px;
     background-color: rgb(212, 210, 210);
     align-content: center;
@@ -149,18 +153,24 @@ section.posts div.post {
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
     }
     & a:hover {
-        transform: rotateY(360deg);
+        transform: rotateY(180deg);
         transition: 0.7s;
         border: 3px solid rgb(78, 78, 255);
         background-color: white;
         color: rgb(78, 78, 255);
-        box-shadow: 15px 15px 10px rgba(78, 78, 255, 0.399);
+        box-shadow: -15px 15px 10px rgba(78, 78, 255, 0.399);
+
+        & h3 {
+            transform: rotateY(180deg);
+            transition: 0.0s;
+        }
     }
 }
 
 section.about-author {
     width:80%;
     margin: 0 auto;
+    margin-top: 30px;
     display: flex;
     height: 450px;
     box-shadow: 15px 15px 10px rgba(78, 78, 255, 0.399);
@@ -172,8 +182,6 @@ section.about-author {
         border-right: 0;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
- 
-
     }
     & .text-about-actor {
         height: 450px;
@@ -210,11 +218,11 @@ section.contact {
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
-    height: 470px;
+    height: 500px;
     padding: 15px;
     border: 4px solid #4e4eff;
     border-radius: 30px;
-    box-shadow: 15px 15px 10px rgba(78, 78, 255, 0.399);
+    box-shadow: 15px 15px 15px rgba(78, 78, 255, 0.399);
     & .articles-form {
         width: 50%;
         & .articles {
@@ -237,8 +245,12 @@ section.contact {
             & input {
                 height: 30px;
                 border: 2px solid rgb(78, 78, 255);
-                padding: 1px;
+                padding: 2px;
                 border-radius: 5px;
+            }
+
+            & input:focus {
+                color: #4e4eff;
             }
             & #nome {
                 grid-area: nome;

@@ -24,8 +24,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & h1 {
+    & a {
         text-align: left;
+        text-decoration: none;
+        color: rgb(78, 78, 255);
     }
     & h2 {
         text-align: center;
@@ -94,6 +96,16 @@ main {
             margin-left: 30%;
             margin-bottom: 10px;
         }
+
+        & pre {
+            background-color: rgb(207, 206, 206);
+            padding: 10px;
+        }
+    }
+
+    & article::first-letter{
+        font-size: 24pt;
+        margin-right: 2px;
     }
 }
 

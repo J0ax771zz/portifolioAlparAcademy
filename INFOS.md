@@ -438,3 +438,72 @@ Exemplo: transform: translate(20px, 30px);
 
 Skew: Essa propriedade deforma os elementos.
 Exemplo: transform: skew(20deg, 10deg);
+
+========================================================================================================================
+TRANSPARÊNCIA
+
+O texto pode se tornar transparente quando trabalhamos a propriedade color em conjunto com a propriedade rgba( o a vem de alfa, que define a transparência).
+
+color: rgba (255, 0, 0, 0.5)
+
+========================================================================================================================
+BOX-SHADOW
+
+Essa propriedade adiciona sombras a um elemento. Sua declaração deve seguir a ordem apresentada abaixo
+
+box-shadow: h-shadow v-shadow blur spread-color
+
+h-shadow: deslocamento horizontal da sombra
+v-shadow: deslocamento vertical da sombra
+blur: torna a sombra mais ou menos focada
+spread: define o tamanho da sombra
+color: define a cor da sombra
+
+========================================================================================================================
+OPACITY
+
+Essa propriedade controla a transparência de um elemento, trabalhando com valores que podem variar entre zero e um, sendo zero totalmente transparente, e um totalmente opaco.
+
+Caso eu deseje colocar um elemento com transparência de 70%, preciso declarar opacity: 0.7;
+
+========================================================================================================================
+PSEUDO-CLASSES
+
+As pseudo-classes no CSS são seletores que permitem estilizar elementos, com base em estados específicos ou posições no documento. Elas oferecem uma forma poderosa de aplicar estilos, com base em diferentes condições  e interações.
+
+Embora exista uma grande variedade de pseudo-classes, aqui mencionaremos algumas que são mais utilizadas.
+
+Lembre-se a declaração das pseudo-classes é feito por:
+
+nomaDaClasse:nomeDaPseudoClasse
+
+
+:hover: Essa pseudo-classe é acionada quando o cursor do mouse está sobre um elemento, sendo mais comumente usando em links e botões.
+
+:active: Essa pseudo-classe é acionada quando o elemento é clicado ou tocado. Também é comumente usando em links e botões.
+
+:not : Essa pseudo-classe nega a seleção de elementos que correspodem ao seletor especificado.
+
+:focus : Essa pseudo-classe é adicionada quando o elemento está em foco, normalmente após ser clicado. Normalmente utilizado em inputs
+
+:nth-child : Essa pseudo-classe é trabalha com os elementos filhos, baseando-se nos indices dos elementos em uma lista
+
+========================================================================================================================
+PSEUDO-ELEMENTOS
+
+Os pseudo-elementos estilizam partes específicas de um... elemento!
+Ou seja, podem ser usados para estilizar partes específicas de um HTML, e também são uma ferramenta poderosa para detalhar o design e a personalização do CSS.
+
+Lembre-se: a declaração dos pseudo-elementos é feita por nomeDoElemento::nomeDoPseudoElemento
+
+::before e ::after: Esses pseudo-elementos permitem inserir conteúdo antes ou depois do conteúdo real de um elemento.
+A inserção desse pseudo-elemento depende da inserção da propriedade content pra funcionar.
+
+::first-line : Esse pseudo-elemento seleciona a primeira linha dentro de um elemento.
+
+::first-letter : Esse pseudo-elemento seleciona a primeira letra de um elemento.
+
+::selection : Esse pseudo-elemento adiciona uma estilização quando selecionamos um texto ou outro elemento.
+
+
+

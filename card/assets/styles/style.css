@@ -46,7 +46,6 @@ section.container p{
 .container section.itemns {
     width: 50%;
     margin-top: 02%;
-
 }
 
 .container section.itemns a{
@@ -56,6 +55,7 @@ section.container p{
     border-radius: 10px;
     padding: 10px;
     text-decoration: none;
+    box-shadow: 10px 10px 50px black;
 
     & .imagem-items {
         width: 50px;
@@ -68,4 +68,8 @@ section.container p{
         font-size: 22pt;
         
     }
+}
+
+.container section.itemns a:hover{
+    box-shadow: 10px 20px 50px rgb(151, 0, 0);
 }
