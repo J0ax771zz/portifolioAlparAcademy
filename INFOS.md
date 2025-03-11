@@ -505,5 +505,107 @@ A inserção desse pseudo-elemento depende da inserção da propriedade content 
 
 ::selection : Esse pseudo-elemento adiciona uma estilização quando selecionamos um texto ou outro elemento.
 
+========================================================================================================================
+TRANSIÇÕES
+
+Referem-se a mudanças sutíes entre os estados de um elemento, sendo normalmente aplicadas às propriedades de cor, tamanho e posição, proporcionando uma experiência visual mais fluida.
+
+Transition : O transition possui uma declaração de sintaxe, que segue uma ordem específica, conforme orientado abaixo:
+
+transition: propriedade duração funcao-timing atraso;
+
+Caso desejamos adicionar várias transições para propriedades diferentes com configurações diferentes, podemos adicionar vírgulas entre as transições.
+
+Propriedade: indica qual propriedade será afetada pela transição, podendo trabalhar de maneira específica (background-color, por exemplo), ou de maneira genérica (usando o all).
+
+Duração: Deine o tempo total que a transição levará para ser concluída. Pode ser especificada em segundos (s), ou milissegundos (ms).
+
+========================================================================================================================
+ANIMAÇÕES
+
+Toda animação é feita quadro a quadro. Então é importante definir qual é o quadro que inicia a animação e qual quadro encerra.
+
+A esses quadros de início e fim damos o nome de keyframes, pois fornecem um controle detalhado da animação.
+
+No CSS, são especificados com @keyframes
+
+========================================================================================================================
+@KEYFRAMES
+
+Quando declaramos os keyframes, podemos trabalhar com valores absolutos ou valores relativos.
+
+Quando determinamos valores absolutos, consideramos apenas um frame de início, e um frame de fim, Mas ao trabalharmos com valores relativos, podemos definir uma sequência de frames que são chaves no funcionamento da animação.
+
+A definição de diversos keyframes é feita em porcentagem sendo 0% o frame inicial, e 100% o frame final.
+
+========================================================================================================================
+RESPONSIVIDADE 
+
+Todo o desenvolvimento feito até o momento foi feito considerando o tamanho de tela do dispositivo que usamos para escrever o CSS e o HTML. Se exibirmos o site em algum outro dispositivo que possua uma configuração diferente, a visualização pode não funcionar como o esperad.
+
+É ai que a responsividade entra, tornando o layout mais fluido, de modo que se adeque a diferentes dispositivos e tamanhos de tela.
+
+A responsividade também pode ser encontrada pelos termos "Design Responsivo" e "Design Adaptativo".
+
+========================================================================================================================
+MEDIA QUERIES
+
+Pense no media query como uma espécie de "comando mágico" do CSS, que permite ajustar estilos dependendo das características do dispositivo.
+
+Ou seja, haverá adaptação com base na altura e na largura da tela, resolução, orientação e até mesmo o tipo de dispositivo.
+
+A responsividade basicamente dá instruções específicas para diferentes cenários, empilhando os elementos em telas pequenas, e espalhando-os em telas grandes.
+
+Determinamos o tamanho máximo e minímo das telas nessas instruções, usando os comandos max-width e min-width, respectivamente.
 
 
+Exemplo: @media screen and (min-width: 600px) and (max-width: 800px) {
+    Estilos para telas entre 600px e 800px
+
+    .container {
+        padding: 20px;
+    }
+}
+
+========================================================================================================================
+UNIDADES RELATIVAS
+
+As unidades relativas são maneiras de definir tamanhos em relação a algum outro valor, geralmente em relação ao tamanho de fonte ao elemento pai. Elas são úteis para criar layouts mais flexíveis e adaptáveis.
+
+As duas unidades mais usadas são a em e a rem, onde a em trabalha as características focando no elemento pai, e a rem trabalha as características focando no elemento raiz (normalmente o tamanho da fonte definido no <html>), proporcionando uma consistência global, visto que o rem não é afetado pelo tamanho das fontes no elemento pai.
+
+Ou seja, o rem atua nas mudanças de forma global, impactando todo o layout de uma vez.
+
+Ao usar unidades realtivas, você pode criar estilos mais dinâmicos e consistentes, facilitando a contrução de designs que funcionam bem em diversos contextos.
+
+========================================================================================================================
+IMAGENS RESPONSIVAS
+
+Imagens responsivas são aquelas que se adaptam de forma inteligente ao tamanho da tela ou do container em que estão inseridas, com o objetivo de serem exibidas de maneira eficiente, e de forma que seja agradável esteticamente, em diferentes dispositivos e resoluções.
+
+Para criar imagens responsivas, geralmente, você utiliza a propriedade max-width: 100% .
+
+Isso garante que a largura da imagem não ultrapasse a largura do contêiner pai, impedindo que a imagem fique cortada ou distorcida.
+
+========================================================================================================================
+DESIGN MOBILE-FIRST
+
+A abordagem "Mobile-Firts" no design web consiste em priorizar a experiência do usuário em dispositivos móveis desde o início do desenvolvimento. Isso implica em criar e otimizar o design para smartphones e tablets, antes de expandi-lo para telas maiores, como desktops.
+
+Ao adotar essa abordagem, benefícios como foco na maioria dos usuários, melhoria no desempenho, facilidade de adaptação para telas maiores, foco na essencialidade e alinhamento às tendências do mercado são alcançados.
+
+A implementação envolve estabelecer estilos base para dispositivos móveis, destacar conteúdo essencial, realizar testes iniciais em dispositivos móveis e expandir gradualmente para telas maiores conforme necessário.
+
+O Mobile-First não apenas responde às demandas crescentes de uso de dispositivos móveis, mas também resulta em designs web mais eficientes e adapáveis, proporcionando uma experiência consistente e satisfatória em todos os dispositivos.
+
+========================================================================================================================
+PERFORMANCE
+
+A performance em um site é fundamental para proporcionar uma eperiência positiva ao usuário. Isso envolve o carregamento rápido de páginas, a renderização eficiente de conteúdo e a resposta rápida ás interações do usuário.
+
+Alguns aspectos cruciais incluem otimização de imagens, minificação de código, uso eficiente de cache, priorização de conteúdo crítico e carregamento assíncrono de recursos.
+
+Para garantir interações responsivas, é essencial otimizar o código JavaScript, utilizar regras de estilo CSS eficientes e monitorar constantemente o desempenho com ferramentas como LightHouse e PageSpeed Insights.
+
+Testes em diversos dispositivos e navegadores, juntamente com atualizações e otimizações contínuas, contribuem para manter um alto padrão de performance ao longo do tempo.
+A performance não apenas impacta a satisfação do usuário, mas também é crucial para o posicionamento nos motores de busca.

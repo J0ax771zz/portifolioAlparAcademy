@@ -7,61 +7,68 @@
         background: #4e4eff;
     }
 }
+
+:root {
+   font-size: 62.5%; 
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 2000px;
+    height: 100vh;
 }
 header {
     width: 100%;
     height: 110px;
-    display: flex;
     background-color: rgba(0, 0, 0, 0.199);
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    padding: 1rem;
     position: fixed;
     top: 0;
     left: 0;
-    & img{
-        width: 100px;
-        border-radius: 50%;
-        border: 3px solid rgb(78, 78, 255);
-
-    }
-    & .itens{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    & nav.itens{
         display: flex;
-        align-items: center;
+        align-content: space-between;
+        flex-wrap: wrap;
         & a {
             text-align: center;
-            font-size: 16pt;
-            margin-right: 18px;
+            font-size: 1.6rem;
+            margin-right: 1.8rem;
             text-decoration: none;
             color: rgb(255, 255, 255);
+            transition: all .3s;
         }
         & a:hover {
             color: rgb(78, 78, 255);
             text-decoration: underline;
-            font-size: 24px;
-            padding: 10px;
+            font-size: 2rem;;
         }
     }
 }
 section.home{
-    width: 100%;
-    height: 500px;
-    margin-top: 10%;
+    max-width: 100%;
+    height: 50rem;
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url("../img/Computer\ Network\ Internet\ GIF\ by\ Butlerm.gif");
     align-content: center;
+    flex-wrap: wrap;
+    & img {
+        max-width: 100%;
+        height: auto;
+    }
+    
     & h2 {
         width: 30%;
         color: white;
         text-align:left;
-        font-size: 24pt;
-        padding: 15px;
-        margin-left: 50px;
+        font-size: 3.2rem;
+        padding: 1.5rem;
+        margin-left: 5rem;
         & strong{
             color: rgb(78, 78, 255);
         }
@@ -108,27 +115,27 @@ section.anuncio-podcast-rocket {
     & .podcast-anuncio{
         align-content: center;
         & img {
-            width: 450px;
-            height: 450px;
-            margin-left: 100px;
-            border-radius: 15px;
-            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
+            max-width: 45rem;
+            height: auto;
+            margin-left: 10rem;
+            border-radius: 1.5rem;
+            box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.233);
         }
     }
 }
 section.posts {
     width: 80%;
     margin: 0 auto;
-    height: 450px;
-    margin-top: 70px;
+    height: 45rem;
+    margin-top: 7rem;
     & article {
         text-align: center;
         & h2 {
-            font-size: 24pt;
+            font-size: 3.2rem;
             color: rgb(78, 78, 255);    
         }
         & p {
-            font-size: 16pt;
+            font-size: 2.2rem;
         }
     }
 }
@@ -140,17 +147,17 @@ section.posts div.post {
     flex-wrap: wrap;
     justify-content: space-around;
     & a {
-        width: 250px;
-        height: 200px;
-        font-size: 18pt;
-        margin-bottom: 30px;
+        width: 25rem;
+        height: 20rem;
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
         color: white;
         align-content: center;
         text-align: center;
         text-decoration: none;
-        border-radius: 30px;
+        border-radius: 3rem;
         background-color: rgb(78, 78, 255);
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
+        box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.233);
     }
     & a:hover {
         transform: rotateY(180deg);
@@ -158,7 +165,7 @@ section.posts div.post {
         border: 3px solid rgb(78, 78, 255);
         background-color: white;
         color: rgb(78, 78, 255);
-        box-shadow: -15px 15px 10px rgba(78, 78, 255, 0.399);
+        box-shadow: -1.5rem 1.5rem 1rem rgba(78, 78, 255, 0.399);
 
         & h3 {
             transform: rotateY(180deg);
@@ -170,42 +177,42 @@ section.posts div.post {
 section.about-author {
     width:80%;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 3rem;
     display: flex;
-    height: 450px;
-    box-shadow: 15px 15px 10px rgba(78, 78, 255, 0.399);
-    border-radius: 30px;
+    height: 45rem;
+    box-shadow: 1.5rem 1.5rem 1rem rgba(78, 78, 255, 0.399);
+    border-radius: 3rem;
     & img {
-        width: 450px;
-        height: 450px;
-        border: 4px solid rgb(78, 78, 255);
+        max-width: 100%;
+        height: auto;
+        border: 0.4rem solid rgb(78, 78, 255);
         border-right: 0;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
+        border-top-left-radius: 3rem;
+        border-bottom-left-radius: 3rem;
     }
     & .text-about-actor {
-        height: 450px;
+        height: auto;
         text-align: left;
         align-items: flex-start;
-        padding-left: 10px;
-        border: 4px solid rgb(78, 78, 255);
+        padding-left: 1rem;
+        border: 0.4rem solid rgb(78, 78, 255);
         border-left: 0;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-        padding: 10px;
+        border-top-right-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+        padding: 1rem;
         & h2 {
-            font-size: 24pt;
+            font-size: 3.2rem;
             color: rgb(78, 78, 255);
         }
         & p {
-            font-size: 18pt;
+            font-size: 2.2rem;
         }
     }
 }
 
 #talk {
     text-align: center;
-    margin-top: 70px;
+    margin-top: 7rem;
     font-size: 3rem;
     background: linear-gradient(to right, #d5daf1,#b495ec ,#4e4eff);
     -webkit-background-clip: text;
@@ -218,35 +225,35 @@ section.contact {
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
-    height: 500px;
-    padding: 15px;
-    border: 4px solid #4e4eff;
-    border-radius: 30px;
-    box-shadow: 15px 15px 15px rgba(78, 78, 255, 0.399);
+    height: 50rem;
+    padding: 1.5rem;
+    border: 0.4rem solid #4e4eff;
+    border-radius: 3rem;
+    box-shadow: 1.5rem 1.5rem 1.5rem rgba(78, 78, 255, 0.399);
     & .articles-form {
         width: 50%;
         & .articles {
             & h2 {
                 text-align: left;
                 color: rgb(78, 78, 255);
-                font-size: 22pt;
+                font-size: 3rem;
             }
             & p{
-                font-size: 14pt;
+                font-size: 1.9rem;
                 width: 75%;
-                margin-bottom: 10px;
+                margin-bottom: 1rem;
             }
         }
         & form {
             display: grid;
             width: 90%;
             grid-template-areas: 'nome sobrenome' 'email email' 'phone phone' 'msg msg' 'btn btn';
-            gap: 10px;
+            gap: 1rem;
             & input {
-                height: 30px;
-                border: 2px solid rgb(78, 78, 255);
-                padding: 2px;
-                border-radius: 5px;
+                height: 3rem;
+                border: 0.2rem solid rgb(78, 78, 255);
+                padding: 0.2rem;
+                border-radius: 0.5rem;
             }
 
             & input:focus {
@@ -266,21 +273,21 @@ section.contact {
             }
             & #msg {
                 grid-area: msg;
-                height: 120px;
+                height: 12rem;
                 text-align: left;
-                padding: 05px;
+                padding: 0.5rem;
                 resize: none;
-                border: 2px solid rgb(78, 78, 255);
-                border-radius: 5px;
+                border: 0.2rem solid rgb(78, 78, 255);
+                border-radius: 0.5rem;
                 font-family: Arial, Helvetica, sans-serif;
             }
             & #btn {
                 grid-area: btn;
-                height: 30px;
-                font-size: 14pt;
+                height: 3rem;
+                font-size: 1.9rem;
                 color: white;
                 border: none;
-                border-radius: 5px;
+                border-radius: 0.5rem;
                 background-color: rgb(78, 78, 255);
                 cursor: pointer;
             }
@@ -291,9 +298,34 @@ section.contact {
     }
     & .gif {
         width: 60%;
-        border-radius: 10px;
+        height: auto;
+        border-radius: 1rem;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
         background-image: url("../img/Glitch\ Hacking\ GIF\ by\ xponentialdesign.gif");
+    }
+}
+
+@media (max-width: 375px){
+    header {
+        align-content: center;
+        & .itens {
+            display: none;
+        }
+    }
+
+    section.home{
+        max-width: 100%;
+        height: 45rem;
+        text-align: center;
+        background-size: 100%;
+        font-size: 2rem;
+    }
+
+    section.anuncio-podcast-rocket {
+        height: 45rem;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
     }
 }
