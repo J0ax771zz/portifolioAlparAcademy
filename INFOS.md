@@ -609,3 +609,63 @@ Para garantir interações responsivas, é essencial otimizar o código JavaScri
 
 Testes em diversos dispositivos e navegadores, juntamente com atualizações e otimizações contínuas, contribuem para manter um alto padrão de performance ao longo do tempo.
 A performance não apenas impacta a satisfação do usuário, mas também é crucial para o posicionamento nos motores de busca.
+
+========================================================================================================================
+JS PARA WEB
+
+O JavaScript é uma oura parte crucial em sites, antigamente e principalmente hoje em dia, é com ele que tornamos nossos sites funcionais, e podemos construir aplicações WEB úteis, como o WhatsApp web, Youtube, etc...
+
+Para construimos essas aplicações WEB, precisamos fazer a manipulação dos Document Object Model, também conhecidos como DOM.
+
+O DOM nos permite alterar tanto aspectos visuais como comportamentais dos documentos.
+
+Para inserirmos códigos no HTML, precisamos colocar a tag <script></script> dentro da tag <body>, mas nos pés do body.
+
+Isso evita erros de execução no código, pois todos os elementos da página já terão sido carregados.
+
+O DOM é uma parte importante do desenvolvimento web interativo, permitindo a criação de páginas dinâmicas e responsivas por meio da manipulação programática dos elementos da página.
+
+========================================================================================================================
+WINDOW
+
+Window é um objeto global que recebe esse nome por possuir todas as informações do navegador, como versão tamanho da janela, altura, largura, etc.
+
+Com essas informações, o desenvolvedor sabe o que pode ser utilizado, e se o navegador está desatualizado.
+
+========================================================================================================================
+SELEÇÃO DE ELEMENTOS
+
+Assim como no CSS, existe uma série de elementos que podem ser modificados dinamicamente no JS.
+
+Aqui abordaremos os mais comuns:
+
+getElementById : com o getElementById podemos facilmente selecionar um elemento que possui um Id. Lembre-se que os IDs são únicos.
+
+getElementsByClassName: com o getElementByClassName nós buscamos por elementos que conrtenham aquela classe. Note que o termo está no plural permitindo a busca por todos os elementos que possuam aquela classe. Ou seja, o seu retorno é um array de elementos.
+
+getElementsByTagName : funciona da mesma forma que o getElementsByClassName, porém ao invés de buscar pela classe, busca por elementos com aquela tag.
+
+querySelector e querySelectorAll : O querySelector e querySelectorAll são funcões relativamente novas, elas buscam por elementos , porém usando seletores do CSS
+
+========================================================================================================================
+MANIPULANDO CONTEÚDO COM JS NA WEB
+
+innerHTML: é utilizado para retornar códigos HTML atráves do JS.
+
+getAttribute : o getAttribute nos permite ver atributos de certos elementos, para que possam ser repassados do HTML ao JS.
+
+Para fazermos a coleta dos atributos, escrevemos da seguinte forma: data-[qualquerNome] = "[valor]".
+
+setAttribute : O setAttribute adiciona ou modifica o valor de uma propriedade.
+
+style : O style nos permite alterar o estilo de um elemento, a partir do JavaScript.
+
+className : com o className podemos alterar toda a classe do elemento, ou buscar a mesma informação.
+
+classList : com o classList, podemos facilmente consultar e manipular classes de um elemento, e de uma forma até melhor do que comparar diretamente pelo className.
+
+appendChild : Nos permite pegar um elemento do HTML de um parent, e mover para outro.
+
+removeChild : Já o removeChild remove o parentesco de um filho.
+
+createElement : nos permite criar elementos dinamicamente, criando o que quisermos, com o conteúdo que precisamos
