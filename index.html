@@ -2,83 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Desenvolvedor fullstack especializado em .NET, React, Next.js e TypeScript. Confira meu portfólio com projetos e experiências na criação de APIs, e-commerces e SaaS." />
     <link rel="stylesheet" href="./portifolio/assets/styles/style.css">
-    <title>João Moscardi - Full-Stack Developer</title>
+    <title>Portifolio</title>
 </head>
 <body>
-    <header class="cabecalho">
+    <header>
         <h1>João Moscardi</h1>
-        <nav class="navbar">
-            <a href="#home">HOME</a>
-            <a href="#stacks">STACKS</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="">CONTACT</a>
-        </nav>
+        <section class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#stacks">Stacks</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
+        </section>
+        <button class="menu-button" aria-label="Botão para acessar submenu de opções quando utilizado no celular">
+            <div class="burguer-menu"></div>
+        </button>
     </header>
-
-    <main class="apresentacao" id="home">
-        <img src="./portifolio/assets/img/Selfie.jpg" alt="foto perfil">
-        <section>
-            <h2 id="titulo-apresentacao">Hey, i'am João Moscardi</h2>
-            <h2>Professional Full-Stack Developer</h2>
+    
+    <section id="home" class="apresentacao">
+        <img id="selfie" src="../../portifolio/assets/img/Selfie.jpg" alt="minha foto">
+        <section class="about">
+            <h2>Hey, i'am João Moscardi</h2>
+            <h3>Professional Fullstack Developer</h3>
             <p>Studying the 3rd(third) semester of<br> Analise e desenvolvimento de Sistemas <br>
-            at Universidade Cruzeiro do Sul, passionate about technology <br>
-            and participant in Alpar Service's Rocket Program 2.0</p>
-            <section class="social-medias">
-                <a href="https://www.linkedin.com/in/moscardijoao/" aria-describedby="link linkedIn">
-                    <img src="./portifolio/assets/img/linkedin.png" alt="imagem linkedIn">
+                at Universidade Cruzeiro do Sul, passionate about technology <br>
+                and participant in Alpar Service's Rocket Program 2.0</p>
+            <section class="social">
+                <a href="https://www.linkedin.com/in/moscardijoao/" aria-label="link para meu linkedIn">
+                    <img src="../../portifolio/assets/img/linkedin.png" alt="">
                 </a>
-                <a href="https://github.com/J0ax771zz" aria-describedby="link github">
-                    <img src="./portifolio/assets/img/github.png" alt="imagem github">
+                <a href="https://github.com/J0ax771zz" aria-label="link para meu github">
+                    <img src="../../portifolio/assets/img/github.png" alt="">
                 </a>
-                <a href="./portifolio/assets/João Paulo Moscardi.docx (1).pdf" aria-describedby="link curriculo">
-                    <img src="./portifolio/assets/img/curriculo.png" alt="imagem portifólio">
+                <a href="./portifolio/assets/João Paulo Moscardi.docx (1).pdf" aria-label="link para meu cúrriculo">
+                    <img src="../../portifolio/assets/img/curriculo.png" alt="">
                 </a>
             </section>
         </section>
-        
-    </main>
+    </section>
 
-    <section class="stacks" id="stacks">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="3"><h1>Stacks</h1></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="./portifolio/assets/img/c-sharp.png" alt="logo c-sharp na aba stacks">
-                        <h3>C#</h3>
-                    </td>
-                    <td>
-                        <img src="./portifolio/assets/img/js.png" alt="logo JavaScript na aba stacks">
-                        <h3>JavaScript</h3>
-                    </td>
-                    <td>
-                        <img src="./portifolio/assets/img/java.png" alt="logo Java na aba stacks">
-                        <h3>Java</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="./portifolio/assets/img/html.png" alt="logo HTML na aba stacks">
-                        <h3>HTML 5</h3>
-                    </td>
-                    <td>
-                        <img src="./portifolio/assets/img/css-3.png" alt="logo CSS 3 na aba stacks">
-                        <h3>CSS 3</h3>
-                    </td>
-                    <td>
-                        <img src="./portifolio/assets/img/python.png" alt="logo Python na aba stacks">
-                        <h3>Python</h3>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <section id="stacks" class="stacks">
+        <h2>Stacks</h2>
+        <p>Algumas das tecnologias que venho utilizando/aprendendo</p>
+
+        <div class="grid-container">
+            <div class="item">
+                <img src="./portifolio/assets/img/c-sharp.png" alt="">
+                <h3>C-Sharp</h3>
+            </div>
+            <div class="item">
+                <img src="./portifolio/assets/img/java.png" alt="">
+                <h3>Java</h3>
+            </div>
+            <div class="item">
+                <img src="./portifolio/assets/img/js.png" alt="">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="item">
+                <img src="./portifolio/assets/img/python.png" alt="">
+                <h3>Python</h3>
+            </div>
+            <div class="item">
+                <img src="./portifolio/assets/img/html.png" alt="">
+                <h3>HTML 5</h3>
+            </div>
+            <div class="item">
+                <img src="./portifolio/assets/img/css-3.png" alt="">
+                <h3>CSS 3</h3>
+            </div>
+        </div>
     </section>
 
     <h2 class="myprojects">My Projects</h2>
@@ -116,10 +110,18 @@
             <h3>Table Site</h3>
             <img class="projeto" src="./portifolio/assets/img/techfix.webp" alt="">
         </a>
-        <a href="./estudos/Portifolio Melhorado/testenavbar.html" aria-describedby="link projeto com tabelas">
-            <h3>Teste Portifolio</h3>
-            <img class="projeto" src="./portifolio/assets/img/techfix.webp" alt="">
-        </a>
     </section>
+
+    <section id="contact" class="formulario">
+        <h3>Contact-me</h3>
+        <form>
+            <input class="inputs" type="text" placeholder="Your fully name">
+            <input class="inputs" type="email" placeholder="Your e-mail">
+            <textarea class="inputs" id="assunto" placeholder="Type your messagem"></textarea>
+            <button>Send</button>
+        </form>
+    </section>
+
+    <script src="./portifolio/assets/JS/app.js"></script>
 </body>
 </html>

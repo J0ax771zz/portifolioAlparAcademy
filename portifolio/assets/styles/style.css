@@ -4,146 +4,229 @@
     box-sizing: border-box;
 }
 
-
-
-body{
-    background-color: rgb(27, 27, 27);
+:root {
+    font-size: 6.25%;
     font-family: Arial, Helvetica, sans-serif;
-}
+ }
 
-body::-webkit-scrollbar {
-    width: 10px;
-    background-color: rgb(207, 135, 2);
-    border-radius: 6px;
+body {
+    background: rgb(27, 27, 27);
 }
 
 header {
-    min-width: 100%;
-    height: 70px;
-    padding: 10px;
-    background-color: orange;
-    text-align: center;
-    align-items: center;
-    position: fixed;
+    width: 100%;
+    height: 10%;
     display: flex;
-    justify-content: space-between;
+    position: absolute fixed;
     top: 0;
     left: 0;
-}
-
-header nav.navbar {
-    margin-right: 12px;
-    font-size: 20px;
-    flex-wrap: wrap;
-    display: flex;
-    gap: 12px;
-    text-align: center;
-}
-
-header nav.navbar a {
+    align-items: center;
     justify-content: space-around;
-    gap: 12px;
+    flex-wrap: wrap;
+    background-color: orange;
+
+    & h1 {
+        font-size: 32rem;
+    }
+    & section.navbar{
+        font-size: 18rem;
+        text-decoration: none;
+        display: none;
+        justify-content: space-around;
+        align-items: end;
+    }
+}
+
+header button.menu-button {
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    right: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    border: 0;
+    background: none;
+}
+.menu-button div.burguer-menu {
+    height: 5rem;
+    width: 32px;
+    background-color: black;
+    border-radius: 5rem;
+    position: relative;
+    transition: 0.3s;
+}
+.menu-button div.burguer-menu::before {
+    content: "";
+    top: -10rem;
+    height: 5rem;
+    width: 32px;
+    background-color: black;
+    border-radius: 5rem;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+.menu-button div.burguer-menu::after {
+    content: "";
+    bottom: -10rem;
+    height: 5rem;
+    width: 32px;
+    background-color: black;
+    border-radius: 5rem;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+.menu-button.active div.burguer-menu{
+    transform: rotate(45deg);
+}
+.menu-button.active div.burguer-menu::after{
+    transform: rotate(-90deg);
+    left: 0;
+    bottom: 0;
+}
+.menu-button.active div.burguer-menu::before {
+    transform: rotate(-90deg);
+    left: 0;
+    top: 0;
+}
+div.links-navbar-resposive-mode{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16rem;
     font-weight: 700;
-    text-decoration: none;
-    color: black;
+    gap: 16rem;
+    background: orange;
+    transition: all 0.5s;
+    & a{
+        text-decoration: none;
+        color: black;
+    }
 }
 
-header nav.navbar a:hover {
+div.links-navbar-resposive-mode a:hover{
     text-decoration: underline;
-    color: white;
 }
 
-main.apresentacao {
-    width: 60%;
-    display: flex;
-    margin-top: 12%;
-    justify-self: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+div.links-navbar-resposive-mode a:active{
+    background-color: white;
 }
 
-main.apresentacao img {
-    width: 300px;
-    border: 5px solid orange;
-    border-radius: 50%;
-    image-rendering: crisp-edges; /* Para navegadores modernos */
-    image-rendering: -webkit-optimize-contrast;
-}
-
-main.apresentacao section{
-    justify-self: center;
-    margin-left: 15px;
-}
-
-main.apresentacao section #titulo-apresentacao{
-    padding-bottom: 10px;
-    font-size: 30px;
-    color: orange;
-}
-
-main.apresentacao section h2 {
-    padding-bottom: 05px;
-    font-size: 20px;
-    color: orange;
-}
-
-main.apresentacao section p {
-    color: rgb(175, 174, 174);
-    font-size: 12pt;
-}
-
-main.apresentacao section.social-medias {
-    display: flex;
-    margin-top: 30px;
-    gap: 32px;
-    justify-self: left;
-    & img{
-        width: 50px;
-        border: none;
-        background-color: white;
-    }
-    & img:hover{
-        width: 60px;
-        border: 2px solid orange;
-    }
-}
-
-section.stacks table {
-    max-width: 70%;
+section.apresentacao{
+    width: 90%;
     height: auto;
-    margin: auto;
-    margin-top: 05%;
-    padding-top: 15px;
-    border: 3px solid orange;
-    border-radius: 20px;
-    color: white;
-    box-shadow: 0px 0px 20px  orange;
-    flex-wrap: wrap;
+    display: flex;
+    margin-top: 30rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & #selfie{
+        border-radius: 50%;
+        border: 3rem solid orange;
+        max-width: 90%;
+        height: auto;
+        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    & section.about{
+       margin-left: 10rem;
+       display: flex; 
+       flex-direction: column;
+       
+       & h2{
+        text-align: center;
+        font-size: 20rem;
+        color: orange;
+       }
+       & h3{
+        text-align: center;
+        font-size: 16rem;
+        color: orange;
+       }
+       & p{
+        text-align: center;
+        font-size: 12rem;
+        color: #dddbdb;
+       }
+    }
+}
+section.about section.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    gap: 12rem;
+    margin-bottom: 50rem;
 }
 
-section.stacks table:hover {
-    box-shadow: 0px 0px 50px inset orange;
+section.about section.social a img{
+    border-radius: 50%;
+    width: 30rem;
 }
 
-section.stacks table h1 {
-    font-size: 30px;
+
+section.stacks {
+    border: 2rem solid orange;
+    border-radius: 30rem;
+    width: 90%;
+    padding: 10rem;
+    margin: 20rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10rem 10rem 10rem rgba(255, 166, 0, 0.253);
+    
+}
+section.stacks h2 {
+    font-size: 22rem;
+    color: orange;
+}
+section.stacks p {
+    font-size: 12rem;
+    text-align: center;
     color: orange;
 }
 
-section.stacks table td {
-    padding: 50px;
-    text-align: center;
+section.stacks div.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-gap: 10px;
 }
 
-section.stacks table img {
-    width: 70px;
-}
 
+section.stacks div.grid-container div.item{
+    margin-top: 16rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    & img{
+        width:50rem;
+    }
+
+    & h3{
+        font-size: 18rem;
+        color: orange;
+    }
+}
 
 .myprojects{
     text-align: center;
     margin-top: 05%;
-    font-size: 50px;
+    font-size: 22rem;
     color: orange;
     font-weight: 900;
 }
@@ -159,9 +242,9 @@ section.projects {
 
 section.projects::-webkit-scrollbar{
     width: 80%;
-    height: 12px;
+    height: 2rem;
     background-color: orange;
-    border-radius: 6px;
+    border-radius: 6rem;
     cursor: pointer;
 }
 
@@ -174,84 +257,144 @@ section.projects::-webkit-scrollbar{
 
 section.projects a{
     
-    width: 50%;
+    width: fit-content;
     margin-bottom: 10px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    margin-right: 8rem;
     color: orange;
-    
     & .projeto{
-        width: 300px;
-        height: 300px;
-        margin-right: 16px;
+        width: 150rem;
+        height: 150rem;
         border: 3px solid orange;
         border-radius: 15px;
         object-fit: cover;
     }
-    
+    & h3{
+        font-size: 16rem;
+    }
 }
 
-section.projects a img:hover{
-    box-shadow: 0px 0px 20px  orange;
+section.formulario{
+    width: 80%;
+    margin: 30rem auto;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    & h3 {
+        font-size: 22rem;
+        text-align: center;
+        color: orange;
+    }
+}
+
+section.formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+}
+
+section.formulario form input, textarea{
+    padding: 10rem;
+    background: rgb(66, 66, 66);
+    border: 1px solid #c0bfbf;
+    border-radius: 10rem;
+    color: #ffffff;
 }
 
 
-@media (max-width: 600px){
+section.formulario form button{
+    padding: 10rem;
+    background: rgb(66, 66, 66);
+    border: 1px solid orange;
+    border-radius: 10rem;
+    color: #ffffff;
+}
+
+section.formulario form button:hover{
+    background: rgb(86, 86, 86);
+}
+section.formulario form button:active{
+    background: rgb(96, 96, 96);
+}
+
+
+@media (min-width: 700px){
     header{
-        justify-content: center;
-        align-items: center;
-        position: fixed;
+        justify-content: space-between;
+        padding: 12px;
+    }
+    header button.menu-button{
+        display: none;
+    }
+    header section.navbar{
+        display: flex;
+        gap: 12px;
+    }
+    header section.navbar a{
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        transition: background 0.5s;
     }
 
-    header nav.navbar{
-        display: none;
+    header section.navbar a:hover {
+        background-color: white;
+        font-size: 22px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    section.apresentacao{
+        flex-direction: row;
+    }
+
+    section.apresentacao img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    section.apresentacao section.about{
+        margin-left: 30rem;
+        & h2{
+            text-align: left;
+            font-size: 30rem;
+            color: orange;
+           }
+           & h3{
+            text-align: left;
+            font-size: 22rem;
+            color: orange;
+           }
+           & p{
+            text-align: left;
+            font-size: 16rem;
+            color: #dddbdb;
+            
+           }
+    }
+    section.about section.social a img{
+        width: 50rem;
     }
 
     section.stacks{
-        & table{
-            & td{
-            max-width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            justify-content: center;
-            align-items: center;
-            }
-        }
+        max-width: 70%;
+    }
+    section.stacks div.grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 10rem;
+        column-gap: 50rem;
+    }
+    .myprojects{
+        font-size: 30rem;
     }
 
-    section.projects a{
-        width: fit-content;
+    section.projects a img.projeto{
+        width: 200px;
+        height: 200px;
     }
-
-    section.projects::-webkit-scrollbar {
-        height: 5px;
+    section.projects::-webkit-scrollbar{
+        height: 8px;
     }
-}
-
-@media (min-width: 600px) and (max-width: 980px){
-    main.apresentacao {
-        justify-content: center;
-        & section h1, h2{
-            text-align: center;
-        }
-
-        & p{
-            margin-left: 40px;
-        }
-    }
-
-    main.apresentacao section.social-medias {
-        justify-self: center;
-    }
-
-    section.projects a{
-        width: fit-content;
-    }
-    
-    section.projects::-webkit-scrollbar {
-        height: 5px;
-    }
-
 }
