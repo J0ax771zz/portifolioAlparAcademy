@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desenvolvedor fullstack especializado em .NET, React, Next.js e TypeScript. Confira meu portfólio com projetos e experiências na criação de APIs, e-commerces e SaaS." />
     <link rel="stylesheet" href="./assets/styles/stylenavbar.css">
     <title>Teste NavBar Responsiva</title>
 </head>
@@ -15,12 +16,12 @@
             <a href="">Projetos</a>
             <a href="">Contato</a>
         </section>
-        <button class="menu-button">
+        <button class="menu-button" aria-label="Botão para acessar submenu de opções quando utilizado no celular">
             <div class="burguer-menu"></div>
         </button>
     </header>
     
-    <section class="apresentacao">
+    <section id="home" class="apresentacao">
         <img id="selfie" src="../../portifolio/assets/img/Selfie.jpg" alt="minha foto">
         <section class="about">
             <h2>Hey, i'am João Moscardi</h2>
@@ -29,21 +30,96 @@
                 at Universidade Cruzeiro do Sul, passionate about technology <br>
                 and participant in Alpar Service's Rocket Program 2.0</p>
             <section class="social">
-                <a href="">
+                <a href="" aria-label="link para meu linkedIn">
                     <img src="../../portifolio/assets/img/linkedin.png" alt="">
                 </a>
-                <a href="">
+                <a href="" aria-label="link para meu github">
                     <img src="../../portifolio/assets/img/github.png" alt="">
                 </a>
-                <a href="">
+                <a href="" aria-label="link para meu cúrriculo">
                     <img src="../../portifolio/assets/img/curriculo.png" alt="">
                 </a>
             </section>
         </section>
     </section>
 
-    <section class="stacks">
-        
+    <section id="stacks" class="stacks">
+        <h2>Stacks</h2>
+        <p>Algumas das tecnologias que venho utilizando/aprendendo</p>
+
+        <div class="grid-container">
+            <div class="item">
+                <img src="../Portifolio Melhorado/assets/img/c-sharp.png" alt="">
+                <h3>C-Sharp</h3>
+            </div>
+            <div class="item">
+                <img src="../Portifolio Melhorado/assets/img/java.png" alt="">
+                <h3>Java</h3>
+            </div>
+            <div class="item">
+                <img src="../Portifolio Melhorado/assets/img/js.png" alt="">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="item">
+                <img src="../Portifolio Melhorado/assets/img/python.png" alt="">
+                <h3>Python</h3>
+            </div>
+            <div class="item">
+                <img src="../Portifolio Melhorado/assets/img/html.png" alt="">
+                <h3>HTML 5</h3>
+            </div>
+            <div class="item">
+                <img src="../Portifolio Melhorado/assets/img/css-3.png" alt="">
+                <h3>CSS 3</h3>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="myprojects">My Projects</h2>
+
+    <section class="projects" id="projects">
+        <a href="./cafeteria/index.html" aria-describedby="link projeto cafeteria">
+            <h3>CoffeShop</h3>
+            <img class="projeto" src="../../portifolio/assets/img/americano.jfif" alt="">
+        </a>
+        <a href="./baralho/index.html" aria-describedby="link projeto baralho">
+            <h3>Baralho</h3>
+            <img class="projeto" src="../../baralho/assets/img/back-card.png" alt="">
+        </a>
+        <a href="./blog/index.html" aria-describedby="link projeto blog">
+            <h3>Blog</h3>
+            <img class="projeto" src="../../portifolio/assets/img/image.png" alt="">
+        </a>
+        <a href="./techfix flex/index.html" aria-describedby="link projeto display flex">
+            <h3>TechFix - Flex</h3>
+            <img class="projeto" src="../../portifolio/assets/img/techfix.webp" alt="">
+        </a>
+        <a href="./techfix grid/index.html" aria-describedby="link projeto display grid">
+            <h3>TechFix - Grid</h3>
+            <img class="projeto" src="../../portifolio/assets/img/techfix.webp" alt="">
+        </a>
+        <a href="./podcast/index.html" aria-describedby="link projeto podcast">
+            <h3>Podcast</h3>
+            <img class="projeto" src="../../portifolio/assets/img/logo.png" alt="">
+        </a>
+        <a href="./card/index.html" aria-describedby="link projeto clone linktree">
+            <h3>Card - LinkTree</h3>
+            <img class="projeto" src="../../portifolio/assets/img/linktree.webp" alt="">
+        </a>
+        <a href="./sitetabelas/index.html" aria-describedby="link projeto com tabelas">
+            <h3>Table Site</h3>
+            <img class="projeto" src="../../portifolio/assets/img/techfix.webp" alt="">
+        </a>
+    </section>
+
+    <section class="formulario">
+        <h3>Contact-me</h3>
+        <form>
+            <input class="inputs" type="text" placeholder="Your fully name">
+            <input class="inputs" type="email" placeholder="Your e-mail">
+            <textarea class="inputs" id="assunto" placeholder="Type your messagem"></textarea>
+            <button>Send</button>
+        </form>
     </section>
 
     <script src="./app.js"></script>

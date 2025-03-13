@@ -180,6 +180,7 @@ section.projects a{
     text-align: center;
     text-decoration: none;
     color: orange;
+    
     & .projeto{
         width: 300px;
         height: 300px;
@@ -188,7 +189,6 @@ section.projects a{
         border-radius: 15px;
         object-fit: cover;
     }
-
     
 }
 

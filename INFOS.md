@@ -669,3 +669,61 @@ appendChild : Nos permite pegar um elemento do HTML de um parent, e mover para o
 removeChild : Já o removeChild remove o parentesco de um filho.
 
 createElement : nos permite criar elementos dinamicamente, criando o que quisermos, com o conteúdo que precisamos
+
+==========================================================================================================================
+EVENTOS
+
+Tudo o que acontece é um evento. Um click no mouse, apertar uma tecla, mover o cursor... Ou seja, são diversos os eventos disparados ao mesmo tempo.
+
+Quando declarados, os eventos podem acabar se sobrescrevendo e, para evitarmos isso, podemos usar o addEventListener(), que permite a execução de quantos eventos quisermos.
+
+Embora no exemplo tenhamos trabalhado com o onClick(), podemos trabalhar com resize, scroll, mouse move, entre vários outros.
+
+==========================================================================================================================
+CONSUMO DE API
+
+API significa Application Programming Interface (Interface de Programação de Aplicação), que permite a interação com bibliotecas, frameworks, sistemas operacionais, e até mesmo comunicação entre aplicações pela internet.
+
+Basicamente, podemos trabalhar com as API's em duas frentes no JS: XML e JSON.
+
+==========================================================================================================================
+REST, SOAP, JSON, XML
+
+Existem dois padrões principais de API's na web: SOAP e REST.
+
+O SOAP, utilizando principalmente em sistemas legados, é um protocolo que usa XML para transmitir os dados. Suas principais vantagens são a segurança e a tipagem explícita, além de uma estrutura rígida e integrada.
+
+Já o REST é baseado em princípios e restrições que definem como os recursos são manipulados e acessados, usando os métodos HTTP (GET, POST, PUT, PATCH, DELETE).
+
+Ao contrário do SOAP, o REST não é um protocolo, mas sim um estilo arquitetural. Ele utiliza JSON para troca de dados, que é mais leve queo XML.
+
+Os recursos no REST são facilmente identificáveis, geralmente por meio da URL, e a tipagem de dados e o formato são mais flexíveis. Os métodos HTTP indicam as operações a serem realizadas, não o corpo da requisição.
+
+==========================================================================================================================
+XMLHTTPREQUEST
+
+Ao criar uma instância do xhr e utilizar o método open, você pode configurar a requisição para passar informações adicionais.
+
+Um exemplo é o evento onreadystatechange, que executa uma função sempre que o estado da requisição muda. No entanto, só com isso não é possível saber se a requisição foi concluída.
+
+Para isso, é necessário verificar tanto o estado quanto o status da requisição. O status é um código que indica o resultado da chamada: o código 200 significa que a requisição foi bem sucedida, enquanto os códigos 400 ou 500 indicam erros.
+
+o readystate, por sua vez, é uma propriedade do xhr que também está relacionada ao seu estado e é baseada em eventos.
+
+==========================================================================================================================
+FETCH API
+
+A função fetch faz parte da API do JavaScript introduzida em 2015, com essa função temos uma forma mais fácil de acessar API's e é baseado em Promises.
+
+Promises são de fato assincronas, e é usada para chamadas demoradas, para criar uma promise, usamos a classe Promise.
+
+A classe Promisse permite tratar operações assíncronas de forma mais organizada, com os métodos then (para sucesso) e catch (para erro).
+
+Podemos encadear vários then e catch, e se um then falhar, os seguintes são ignorados até um catch tratar o erro. Se não houver catch, o código falha. Para simular um finally, basta adicionar um then após o catch.
+
+==========================================================================================================================
+TRY CATCH
+
+O try... catch é uma forma de protegermos o código em caso de erros, devendo utilizar em todos os lugares que podem gerar um risco, como em conexões com aplicações, com bancos de dados, informações advindas de usuários, etc.
+
+Erros que não são tratados em JavaScript interrompem a execução do código restante e podem inclusive, fazer o site parar de funcionar.

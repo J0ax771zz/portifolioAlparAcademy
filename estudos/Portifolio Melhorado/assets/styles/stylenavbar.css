@@ -100,11 +100,19 @@ div.links-navbar-resposive-mode{
     font-weight: 700;
     gap: 16rem;
     background: orange;
-    transition:  0.5s;
+    transition: all 0.5s;
     & a{
         text-decoration: none;
         color: black;
     }
+}
+
+div.links-navbar-resposive-mode a:hover{
+    text-decoration: underline;
+}
+
+div.links-navbar-resposive-mode a:active{
+    background-color: white;
 }
 
 section.apresentacao{
@@ -119,8 +127,10 @@ section.apresentacao{
     & #selfie{
         border-radius: 50%;
         border: 3rem solid orange;
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
+        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
     }
 
     & section.about{
@@ -151,6 +161,7 @@ section.about section.social{
     align-items: center;
     margin-top: 10rem;
     gap: 12rem;
+    margin-bottom: 50rem;
 }
 
 section.about section.social a img{
@@ -159,10 +170,151 @@ section.about section.social a img{
 }
 
 
+section.stacks {
+    border: 2rem solid orange;
+    border-radius: 30rem;
+    width: 90%;
+    padding: 10rem;
+    margin: 20rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10rem 10rem 10rem rgba(255, 166, 0, 0.253);
+    
+}
+section.stacks h2 {
+    font-size: 22rem;
+    color: orange;
+}
+section.stacks p {
+    font-size: 12rem;
+    text-align: center;
+    color: orange;
+}
+
+section.stacks div.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-gap: 10px;
+}
 
 
+section.stacks div.grid-container div.item{
+    margin-top: 16rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    & img{
+        width:50rem;
+    }
+
+    & h3{
+        font-size: 18rem;
+        color: orange;
+    }
+}
+
+.myprojects{
+    text-align: center;
+    margin-top: 05%;
+    font-size: 22rem;
+    color: orange;
+    font-weight: 900;
+}
+
+section.projects {
+    width: 76%;
+    margin: 0 auto;
+    margin-top: 03%;
+    justify-self: center;
+    display: flex;
+    overflow: auto;
+}
+
+section.projects::-webkit-scrollbar{
+    width: 80%;
+    height: 2rem;
+    background-color: orange;
+    border-radius: 6rem;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 10%;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.projects a{
+    
+    width: fit-content;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 8rem;
+    color: orange;
+    & .projeto{
+        width: 150rem;
+        height: 150rem;
+        border: 3px solid orange;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    & h3{
+        font-size: 16rem;
+    }
+}
+
+section.formulario{
+    width: 80%;
+    margin: 30rem auto;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    & h3 {
+        font-size: 22rem;
+        text-align: center;
+        color: orange;
+    }
+}
+
+section.formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+}
+
+section.formulario form input, textarea{
+    padding: 10rem;
+    background: rgb(66, 66, 66);
+    border: 1px solid #c0bfbf;
+    border-radius: 10rem;
+    color: #ffffff;
+}
 
 
+section.formulario form button{
+    padding: 10rem;
+    background: rgb(66, 66, 66);
+    border: 1px solid orange;
+    border-radius: 10rem;
+    color: #ffffff;
+}
+
+section.formulario form button:hover{
+    background: rgb(86, 86, 86);
+}
+section.formulario form button:active{
+    background: rgb(96, 96, 96);
+}
 
 
 @media (min-width: 600px){
@@ -175,6 +327,20 @@ section.about section.social a img{
     }
     header section.navbar{
         display: flex;
+        gap: 12px;
+    }
+    header section.navbar a{
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        transition: background 0.5s;
+    }
+
+    header section.navbar a:hover {
+        background-color: white;
+        font-size: 22px;
+        padding: 5px;
+        border-radius: 5px;
     }
 
     section.apresentacao{
@@ -184,5 +350,49 @@ section.about section.social a img{
     section.apresentacao img{
         max-width: 100%;
         height: auto;
+    }
+
+    section.apresentacao section.about{
+        margin-left: 30rem;
+        & h2{
+            text-align: left;
+            font-size: 30rem;
+            color: orange;
+           }
+           & h3{
+            text-align: left;
+            font-size: 22rem;
+            color: orange;
+           }
+           & p{
+            text-align: left;
+            font-size: 16rem;
+            color: #dddbdb;
+            
+           }
+    }
+    section.about section.social a img{
+        width: 50rem;
+    }
+
+    section.stacks{
+        max-width: 70%;
+    }
+    section.stacks div.grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 10rem;
+        column-gap: 50rem;
+    }
+    .myprojects{
+        font-size: 30rem;
+    }
+
+    section.projects a img.projeto{
+        width: 200px;
+        height: 200px;
+    }
+
+    section.projects::-webkit-scrollbar{
+        height: 8px;
     }
 }
