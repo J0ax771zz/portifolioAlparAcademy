@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing-Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="min-vh-100">
+    <nav class="navbar navbar-expand-sm bg-primary shadow fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand text-white h1">Alpar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarDropdown"
+          aria-controls="navbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                href="#home"
+                class="nav-link active text-white"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#servicos" class="nav-link text-white">Serviços</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Iniciando a seção sobre(HERO)-->
+    <main class="container" id="home">
+      <div class="row">
+        <div class="col-sm my-sm-5 mt-5 py-5 d-flex flex-column align-items-center">
+          <h1 class="fw-bold my-sm-5">
+            Somos líderes
+            <span class="text-primary">em transformação digital.</span>
+          </h1>
+          <p class="fs-4">
+            Conectamos negócios a soluções inovadoras, proporcionando resultado
+            de alta performance.
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-6 my-sm-5 py-sm-5 py-5">
+          <img
+            class="img-fluid"
+            src="./assets/img/undraw_experience-design_d4md.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </main>
+
+    <!--Iniando a seção Serviços-->
+    <h1 class="text-center text-primary fw-bold mb-sm-2">
+      Conheça nossos serviços
+    </h1>
+
+    <div class="container" id="servicos">
+        <h2 class="text-center mb-4">Serviços</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                  <div class="card-img-top">
+                    <img class="img-fluid p-5" src="./assets/img/undraw_algorithm-execution_rksm.svg" alt="">
+                  </div>  
+                  <div class="card-body">
+                    <h5 class="card-title text-center text-primary">Modernização de aplicações</h5>
+                    <p class="card-text text-center">Implemente soluções ágeis que potencializam suas operações estratégicas</p>
+                  </div>
+                </div>
+              </div>
+          
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top">
+                <img class="img-fluid p-5" src="./assets/img/undraw_live-collaboration_i8an.svg" alt="">
+              </div>  
+              <div class="card-body">
+                <h5 class="card-title text-center text-primary">Integrações e Hiperautomação</h5>
+                <p class="card-text text-center">Aumente a performance e transite os dados de forma segura</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top">
+                <img class="img-fluid p-5" src="./assets/img/undraw_my-app_15n4.svg" alt="">
+              </div>  
+              <div class="card-body">
+                <h5 class="card-title text-center text-primary">Aplicativos Personalizados</h5>
+                <p class="card-text text-center">Crie aplicativos personalizados, intuitivos e projetados para resolver suas necessidades</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <footer class="bg-dark text-white text-center py-1">
+        <h1 class="fs-6">&copy; 2025 João Moscardi - Alpar Services - Todos os direitos reservados.</h1>
+      </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

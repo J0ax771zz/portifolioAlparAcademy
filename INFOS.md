@@ -727,3 +727,63 @@ TRY CATCH
 O try... catch é uma forma de protegermos o código em caso de erros, devendo utilizar em todos os lugares que podem gerar um risco, como em conexões com aplicações, com bancos de dados, informações advindas de usuários, etc.
 
 Erros que não são tratados em JavaScript interrompem a execução do código restante e podem inclusive, fazer o site parar de funcionar.
+
+==========================================================================================================================
+BOOTSTRAP
+==========================================================================================================================
+O Bootstrap é uma ferramenta front-end para construção de sites e sistemas web. Ele é um conjunto de estilos CSS prontos que ajudam a poupar tempo de desenvolvimento.
+
+O principal atrativo do Bootstrap é sua grid, que divide o site em 12 colunas, facilitando a organização. Além disso, ele oferece classes preestilizadas para estilizar tabelas, imagens, formulários e outros componentes úteis.
+
+==========================================================================================================================
+BREAKPOINTS
+==========================================================================================================================
+Os Breakpoints definem a responsividade das classes dos Bootstrap, e muitos deles aceitam breakpoints.
+
+Os Breakpoints são separados em
+
+===============================
+Breakpoints / Sufixo da classe / Largura
+Extra Small /     none         / >576px
+Small       /      sm          / >576px
+Medium      /      md          / >768px
+Large       /      lg          / >992px
+Extra Large /      xl          / >1200px
+Extra extra large / xxl        / >1400px
+
+
+==========================================================================================================================
+CONTAINERS
+==========================================================================================================================
+O container é um elemento que comporta todo um conteúdo, que pode ser fixo ou flúido, dependendo de sua declaração. Normalmente, é utilizado um container por página.
+
+Para trabalharmos com valores fixos, podemos utilizar a classe .container, mas podemos também trabalhar com a fluidez ao usarmos a classe .container-fluid
+
+Os containers aceitam a utilização de breakpoints
+
+==========================================================================================================================
+GRID
+==========================================================================================================================
+O sistema de grid utiliza linhas e colunas, que podem ser segmentados em até 12 partes, tanto fixas quanto fluidas.
+
+Para determinarmos o tamanho fixo de uma coluna, basta inserir o sufixo -[numero de colunas 1-12]. Se eu colocar o valor "col-4", significará que a coluna ocupará 4 espaçõs, entre os 12 existentes.
+
+Para trabalhar com valores fluidos, basta colocar o col sem valor. 
+
+Podemos ainda utilizar breakpoints no grid, e utilizar aida .row-cols-[numero], que define o máximo de linhas que uma coluna terá.
+
+==========================================================================================================================
+TIPOGRAFIA
+==========================================================================================================================
+O Bootstrap muda o tamanho daas fontes por conta própria, então os headings de 1 a 6 já possuem um tamanho definido.
+
+Mas podemos utilizar esses elementos junto ao parágrafo, através da aplicação das classes.
+
+==========================================================================================================================
+IMAGEM E FIGURES
+==========================================================================================================================
+Para estilizar imagens para que esta fique responsiva, utilizamos a classe .img-fluid. Com isso, a imagem terá uma largura de 100% e altura automática.
+
+Para dar uma borda redonda para uma imagem, basta acrescentar a classe rounded.
+
+As figures são imagens, com texto descritivo abaixo.

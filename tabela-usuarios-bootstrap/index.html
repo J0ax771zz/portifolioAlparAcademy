@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="min-vh-100">
+    <div class="container text-center mt-2 mt-md-5 mt-xl-5">
+      <h1 class="fs-1">Tabela de Usuários</h1>
+      <p class="fs-3">Controle de usuários e funcionários</p>
+    </div>
+
+    <!--Começo da tabela-->
+    <div class="container">
+      <div class="table-responsive-sm">
+        <table class="table table-sm table-dark table-hover table-striped table-bordered border-success text-center align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Cargo</th>
+              <th class="bg-success">Visualizar</th>
+              <th class="bg-info">Editar</th>
+              <th class="bg-danger">Deletar</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr>
+                <td>1223</td>
+                <td>João Paulo</td>
+                <td>joao.moscardi@alpar.com</td>
+                <td>Desenvolvedor Trainee</td>
+                <td><button type="button" class="btn btn-success p-1">Visualizar</button></td>
+                <td><button type="button" class="btn btn-info p-1">Editar</button></td>
+                <td><button type="button" class="btn btn-danger p-1">Deletar</button></td>
+            </tr>
+            <tr>
+                <td>3590</td>
+                <td>Carlos Henrique</td>
+                <td>carlosHenriq@gmail.com</td>
+                <td>Designer</td>
+                <td><button type="button" class="btn btn-success p-1">Visualizar</button></td>
+                <td><button type="button" class="btn btn-info p-1">Editar</button></td>
+                <td><button type="button" class="btn btn-danger p-1">Deletar</button></td>
+            </tr>
+            <tr>
+                <td>9965</td>
+                <td>Luana Cristina</td>
+                <td>luana.godzz@gmail.com</td>
+                <td>Desenvolvedora Pl</td>
+                <td><button type="button" class="btn btn-success p-1">Visualizar</button></td>
+                <td><button type="button" class="btn btn-info p-1">Editar</button></td>
+                <td><button type="button" class="btn btn-danger p-1">Deletar</button></td>
+            </tr>
+            <tr>
+                <td>3895</td>
+                <td>Caio Andrade</td>
+                <td>caio.andrade@alpar.com</td>
+                <td>Desenvolvedor ServiceNow</td>
+                <td><button type="button" class="btn btn-success p-1">Visualizar</button></td>
+                <td><button type="button" class="btn btn-info p-1">Editar</button></td>
+                <td><button type="button" class="btn btn-danger p-1">Deletar</button></td>
+            </tr>
+            <tr>
+                <td>5678</td>
+                <td>Larissa Santos</td>
+                <td>larissa.santos@gmail.com</td>
+                <td>RH</td>
+                <td><button type="button" class="btn btn-success p-1">Visualizar</button></td>
+                <td><button type="button" class="btn btn-info p-1">Editar</button></td>
+                <td><button type="button" class="btn btn-danger p-1">Deletar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--Fim do body-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
