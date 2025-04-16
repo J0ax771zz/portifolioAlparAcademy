@@ -787,3 +787,42 @@ Para estilizar imagens para que esta fique responsiva, utilizamos a classe .img-
 Para dar uma borda redonda para uma imagem, basta acrescentar a classe rounded.
 
 As figures são imagens, com texto descritivo abaixo.
+
+==========================================================================================================================
+FORMULÁRIOS
+==========================================================================================================================
+O Bootstrap oferece várias funcionalidades para criar formulários responsivos, e bem estilizados.
+
+Ele inclui classes para campos de entrada, como text fields, selects, checkboxes e radios, além de opções para formatação de labels e mensagens de erro.
+
+O framework também facilita a criação de formulários com layout flexível, usando sua grid system.
+
+Ele oferece botões de envio e componentes como alertas e tooltips para validação e feedback.
+
+Além disso o Bootstrap suporta a personalização de estilos com classes predefinidas, permitindo um design consistente e adaptável a diferentes dispositivos.
+
+==========================================================================================================================
+COMPONENTES
+==========================================================================================================================
+Um componente é a junção de vários elementos, e a maioria necessita da inclusão do arquivo de JavaScript no Bootstrap.
+
+Existem diversos componentes, e todos podem ser consultados em: 
+https://getbootstap.com/docs/5.3/components/
+
+Accordion: 
+Accordions(arcodeões) são aqueles menus suspensos, que exibem apenas o título, e necessitam ser clicados para exbir mais informações.
+
+
+Alerts:
+São formas de alertar o usuário sobre alguma coisa que acontece no sistema. Existe uma infinidade de alertas.
+
+Badges:
+Os badges(ou emblemas) adicionam um estilo a um texto auxiliar, que possui caráter informativo
+
+
+Outras configurações:
+Podemos ainda adicionar cores de fundo, transformar os conteúdos em pílulas, estilizar botões...
+
+O Bootstrap possui um vasto universo de customizações, que deixam as páginas mais bonitas e funcionais.
+
+Até ouso dizer que, a partir desse momento, você começará a ver as páginas web com outros olhos!

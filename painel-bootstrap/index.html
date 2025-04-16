@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevTube</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="min-vh-100 bg-dark">
+    <!--Mensagem de bem-vindo ao DevTube-->
+    <div class="alert alert-success text-center m-0" role="alert">
+      Bem-vindo de volta ao <span class="text-danger fw-bold">DevTube</span>
+    </div>
+
+    <!--Incío da navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img width="50" height="50" src="https://img.icons8.com/color/50/youtube-play.png" alt="youtube-play"/>
+            <strong>DevTube</strong>
+        </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Inscrições</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Biblioteca</a>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link text-white position-relative" href="#">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAz0lEQVR4nO3QTQ7BQBTA8dkol+ACPtYcQZyIC7D00TiNWOiGA3AAbRfds+QvjSYWKnTeaxH+ySSTTPJ+mWfMv08O6AEB4APdImGfW/siwCYw4b4x0MgDrABz4MTj4rcZUNZEl7zeQgXn+tOsuVK0BZwt4HjtdQnsYt9UAu8E8FYCHwXwQQKL+i4YKEnheIYNXFOAqzZwRwFu28ADBbhvA28U4HVm+HcCPPTz3gWvNDYSpQyOxIOfBYQpcGDyDhilwMMiYCfBw+TEdyd32Hx7F0A1ugEMIjIyAAAAAElFTkSuQmCC" alt="filled-appointment-reminders">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    3
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <!--Inicio dos cards-->
+      <div class="container mt-4">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card">
+                  <img src="https://i.ytimg.com/vi/maoHDmRu3z4/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAe9jEhBewB9SI0MdIB-HAruPFWKQ" class="card-img-top" alt="Vídeo 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Como usar Bootstrap</h5>
+                    <p class="card-text">Aprenda a criar interfaces responsivas com Bootstrap 5.</p>
+                    <a href="https://youtu.be/maoHDmRu3z4?si=k4A-osUZC1vcIoKF" class="btn btn-danger btn-sm">Assistir <i class="bi bi-play-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://i.ytimg.com/vi/xdXd8BJwJ-U/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA6wDBGRegcJ4oonB5ZiWBEwJSLfg" class="card-img-top" alt="Vídeo 1">
+                  <div class="card-body">
+                    <h5 class="card-title">React + Bootstrap</h5>
+                    <p class="card-text">Como integrar componentes do Bootstrap com React.</p>
+                    <a href="https://youtu.be/xdXd8BJwJ-U?si=PCCXMwrWGv3wYh4U" class="btn btn-danger btn-sm">Assistir <i class="bi bi-play-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://i.ytimg.com/vi/Lx_YsoMgP40/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCNhiFaLHwPDfK8J9fQsFCUJEMtsg" class="card-img-top" alt="Vídeo 1">
+                  <div class="card-body">
+                    <h5 class="card-title">HTML e CSS Básico</h5>
+                    <p class="card-text">Comece seu caminho no desenvolvimento web!</p>
+                    <a href="https://youtu.be/Lx_YsoMgP40?si=S9RTS4HXdLb-063n" class="btn btn-danger btn-sm">Assistir <i class="bi bi-play-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/aA31cVca_hI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBWjf4N89Di_w7_xehzwLxr5Nna1g" class="card-img-top" alt="Vídeo 1">
+                    <div class="card-body">
+                    <h5 class="card-title">JavaScript Básico</h5>
+                    <p class="card-text">Aprenda a criar programas e manipular o HTML e CSS</p>
+                    <a href="https://youtu.be/aA31cVca_hI?si=RgP9gfldzWuzSdjG" class="btn btn-danger btn-sm">Assistir <i class="bi bi-play-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://i.ytimg.com/vi/XQkf-6Yl3WM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDlIe0YmzRll0Pdi3RXl30ISmNuaQ" class="card-img-top" alt="Vídeo 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Aulão de banco de dados</h5>
+                    <p class="card-text">Aprenda do básico ao avançado de SQL e Banco de dados</p>
+                    <a href="https://youtu.be/XQkf-6Yl3WM?si=hXK0lSlk8Wu7EmsU" class="btn btn-danger btn-sm">Assistir <i class="bi bi-play-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://i.ytimg.com/vi/VumdXFJ4n7o/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCsm-cNryRUeLDvW-RwHiaccWA44A" class="card-img-top" alt="Vídeo 1">
+                  <div class="card-body">
+                    <h5 class="card-title">O básico de AngularJS</h5>
+                    <p class="card-text">Aprenda essa tecnologia incrível em combinação com o JavaScript</p>
+                    <a href="https://youtu.be/VumdXFJ4n7o?si=JmqM2SL4dYA3hF4t" class="btn btn-danger btn-sm">Assistir <i class="bi bi-play-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

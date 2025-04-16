@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seja bem-vindo</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="min-vh-100 " id="body">
+
+    <div class="container">
+        <h1 class="text-center text-primary mt-3">Entre em contato conosco</h1>
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-4 col-xl-6">
+                <img id="main-desk-form" class="img-fluid " src="./assets/img/main-desk-form.jpg" alt="">
+            </div>
+            <div id="div-formulario" class="col-sm-12 col-md-4 col-xl-6">
+                <form id="formulario" novalidate>
+                    <div class="mb-3 form-group">
+                      <label for="nome" class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="nome" required>
+                      <div class="invalid-feedback">Informe o nome.</div>
+                      <div class="valid-feedback">Tudo certo!</div>
+                    </div>
+              
+                    <div class="mb-3 form-group">
+                      <label for="email" class="form-label">E-mail</label>
+                      <input type="email" class="form-control" id="email" required>
+                      <div class="invalid-feedback">E-mail inválido.</div>
+                      <div class="valid-feedback">Tudo certo!</div>
+                    </div>
+              
+                    <div class="mb-3 form-group">
+                      <label for="assunto" class="form-label">Assunto</label>
+                      <select class="form-select" id="assunto" required>
+                        <option value="">Escolha...</option>
+                        <option>Dúvida</option>
+                        <option>Sugestão</option>
+                        <option>Reclamação</option>
+                      </select>
+                      <div class="invalid-feedback">Selecione um assunto.</div>
+                      <div class="valid-feedback">Tudo certo!</div>
+                    </div>
+              
+                    <div class="mb-3 form-group">
+                      <label for="mensagem" class="form-label">Mensagem</label>
+                      <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                      <div class="invalid-feedback">Escreva sua mensagem.</div>
+                      <div class="valid-feedback">Tudo certo!</div>
+                    </div>
+              
+                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                  </form>
+            </div>
+        </div>
+        <div class="alert alert-success mt-3 success-message" id="successMessage">
+            Formulário enviado com sucesso!
+        </div>
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
