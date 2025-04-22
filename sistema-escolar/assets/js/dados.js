@@ -22,12 +22,11 @@ btnLogin.addEventListener('click', (e) => {
     e.preventDefault()
     const email = emailUsuario.value;
     const senha = senhaUsuario.value;
-    
     const usuarioEncontrado = verificarUsuario(email, senha);
 
     if (usuarioEncontrado) {
         localStorage.setItem('usuarioLogadoAtual', JSON.stringify(usuarioEncontrado));
-        window.location.href = '/sistema-escolar/assets/pages/perfil.html';
+        window.location.href = '/portifolioAlparAcademy/sistema-escolar/assets/pages/perfil.html';
     } else {
         console.log("Email ou senha inválidos");
         erro.classList.remove('d-none'); // Corrigido aqui
