@@ -826,3 +826,108 @@ Podemos ainda adicionar cores de fundo, transformar os conteúdos em pílulas, e
 O Bootstrap possui um vasto universo de customizações, que deixam as páginas mais bonitas e funcionais.
 
 Até ouso dizer que, a partir desse momento, você começará a ver as páginas web com outros olhos!
+
+====================================================================================================================================================================================================================================================
+ORIENTAÇÃO A OBJETOS
+==========================================================================================================================
+A Orientação a Objetos (OO, POO ou OOP) é um paradigma da programação.Ou seja, é uma forma de pensar e programar.
+
+Esse paradigma trata tudo como se fosse um objeto, e os objetos descrevem as características de algumas coisas.
+
+Pense nas características físicas de uma pessoa. São todas as mesmas? Não. Mas existem elementos-chave que podemos usar para parametrizar as características.
+
+Elementos como cor do cabelo, cor dos olhos, e nomes são elementos que se repetem em todas as pessoas.
+
+E podemos usar essas características para memorizar (ou escrever) sobre as pessoas. Assim, garantimos que todas as pessoas possuam a mesma estrutura.
+
+Na orientação a objetos, as coisas funcionam da mesma forma.
+
+==========================================================================================================================
+Classes
+
+São os modelos ou "plantas" para a criação de objetos. Elas definem atributos (características) e métodos (comportamentos) que os objetos da classe terão.
+
+A classe serve como um molde para criar múltiplos objetos, permitindo que compartilhem as mesmas propriedades e comportamentos.
+
+Cada objeto instanciado de uma classe pode ter valores diferentes para seus atributos, mas todos compartilham a mesma estrutura definida pela classe
+
+==========================================================================================================================
+Abstração
+==========================================================================================================================
+A abstração na POO oculta os detalhess complexos e exibe apenas as informações essenciais, permitindo que o programador se concentre na funcionalidade. Isso é feito por meio de classes e interfaces, tornando o código mais modular, reutilizavel e fácil de manter
+
+==========================================================================================================================
+Encapsulamento
+==========================================================================================================================
+O encapsulamento na POO oculta os dados internos de uma classe, permitindo o acesso e modificação apenas por meio de métodos públicos, garantindo segurança e integridade dos dados.
+
+==========================================================================================================================
+Herança
+==========================================================================================================================
+A herança na POO permite criar uma nova classe baseada em uma existente, reutilizando, modificando ou expandindo seus atributos e métodos. Isso facilita a reutilização de código e a criação de hierarquiass de classes.
+
+==========================================================================================================================
+Polimorfismo
+==========================================================================================================================
+O polimorfismo na POO permite que objetos de classes diferentes compartilhem o mesmo método, mas com comportamentos distintos, tornando o código mais flexível e escalável.
+
+==========================================================================================================================
+PROTÓTIPOS
+==========================================================================================================================
+São um mecanismo onde objetos herdam caracteristícas de outros objetos de mode que o compartilhamento das funcionalidades acontece sem a necessidade de definir classes, no sentido tradicional.
+
+Todo objeto no JavaScript possui uma propriedade interna chamada [[Prototype]], que referencia outro objeto.
+
+Quando você tenta acessar uma propriedade ou método que não está presente no próprio objeto, o motor do JavaScript busca essa propriedade no objeto referenciado pelo [[Prototype]].
+
+Esse processo continua até que a propriedade seja encontrada ou até que o final da cadeia de protótipos seja alcançado.
+
+==========================================================================================================================
+WRAPPERS
+==========================================================================================================================
+É um padrão de design que envolve um objeto, adicionando funcionalidades extras sem modificar sua estrutura original, como validação ou tratamento de erros.
+
+Cada tipo primitivo (string, number, boolean) de protótipo, possui um objeto wrapper associado, que contém métodos úteis. Com isso, o JavaScript automaticamente converte para os objetos wrapper correspondentes, permitindo que os métodos sejam acessados.
+
+==========================================================================================================================
+PROTÓTIPOS STRING
+==========================================================================================================================
+O protótipo String.prototype oferece uma variedade de métodos para manipulação e consulta de strings
+
+chatAt(index) = Retorna o caractere na posição especificada
+trim() = Remove o espaço em branco do início e do fim da string
+padStart(lenght, fillString) = Adiciona caracteres a string para que ela tenha um tamanho específico.
+slice(start, end) = Extrai uma seção da string e retorna uma nova string
+toLowerCase() e toUpperCase() = Convertem a string para minúscula ou maiúscula, repectivamente.
+includes(searchString, position) = Verifica se a string contém a substring especificada.
+
+==========================================================================================================================
+PROTÓTIPOS NUMBER
+==========================================================================================================================
+O protótipo Number.prototype inclui métodos que são úteis para operações matemáticas e formatação de números.
+
+toFixed(digits) = Retorna o caractere na posição especificada
+toString(base) = onverte um número para uma string, em uma base específica (por exemplo, binário, hexadecimal ...).
+toPrecision(precision) = Formata um número com um número específico de dígitos significativos.
+
+==========================================================================================================================
+PROTÓTIPOS BOOLEAN
+==========================================================================================================================
+O protótipo Boolean.prototype é mais simples, já que os valores booleanos são geralmente diretos (verdadeiro ou falso).
+Ele não possui métodos exlcusivos que são frequentemente utilizados como nos casos de herda métodos de Object.prototype, como String e Number. Entretanto, ele herdará os métodos, mas retornando a resposta como true ou false.
+
+==========================================================================================================================
+PROTÓTIPOS ARRAYS
+==========================================================================================================================
+Os métodos de prototype para Arrays, possso dizer com segurança, são os mais importantes, e serão muito usados durante sua carreira em JavaScript, então lembre-se deles.
+
+push(element1, ..., elementN) = Adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array
+pop() = Remove o último elemento de um array e o retorna. Isso muda o tamanho do array.
+shift() = Remove o primeiro elemento de um array e o retorna. Isso também muda o tamanho do array.
+unshift(element1, ..., elementN) = Adiciona um ou mais elementos ao início do array e retorna o novo comprimento do array.
+slice(start, end) = Retorna uma cópia de um array a partir do índice inicial até uma posição antes do índice final.
+splice(start, deleteCount, item11, ..., itemN) = Altera o conteúdo de um array, adicionando novos elementos enquanto remove elementos antigos.
+forEach(callback) = Executa uma função fornecida uma vez para cada elemento do array.
+map(callback) = Cria um novo array com os resultados da chamada de uma função fornecida em cada elemento do array.
+filter(callback) = Cria um novo array com todos os elementos que passam no teste implementado pela função fornecida.
+reduce(callback, initialValue) = Aplica uma função contra um acumulador e cada valor do array (da esquerda para a direita) para reduzi-lo a um único valor.
