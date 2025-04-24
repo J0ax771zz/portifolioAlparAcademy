@@ -931,3 +931,57 @@ forEach(callback) = Executa uma função fornecida uma vez para cada elemento do
 map(callback) = Cria um novo array com os resultados da chamada de uma função fornecida em cada elemento do array.
 filter(callback) = Cria um novo array com todos os elementos que passam no teste implementado pela função fornecida.
 reduce(callback, initialValue) = Aplica uma função contra um acumulador e cada valor do array (da esquerda para a direita) para reduzi-lo a um único valor.
+
+==========================================================================================================================
+PADRÕES DE DESENVOLVIMENTO
+==========================================================================================================================
+Padrões de desenvolvimento são soluções reutilizáveis para problemas comuns no design de software, Eles representam as melhores práticas de desenvolvedores experientes, simplificando a comunicação de conceitos complexos, Usar padrões acelera o desenvolvimento e melhora a qualidade e manutenibilidade do código.
+
+A importância:
+Ajudam a resolver problemas de forma eficaz e criativa, já que o código nem sempre é livre de erros.
+
+Eficiência: Evitam a reinvenção da roda, com soluções testadas e comprovadas, para problemas comuns.
+Qualidade: Promovem práticas de desenvolvimento que resultam em código mais limpo, organizado e testável.
+Comunicação: Facilitam a comunicação entre desenvolvedores, permitindo que discutam soluções de alto nível mais facilmente.
+Manutenibilidade: Facilitam a manutenção e a melhoria do código, pois padrões bem estabelecidos são mais fáceis de entender e modificar.
+
+==========================================================================================================================
+PADRÕES CRIACIONAIS SINGLETON
+==========================================================================================================================
+Garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a essa instância. Em JavaScript, isso pode ser alcançado usando módulos ou fechamentos (closures) para garantir que uma função construtora seja chamada apenas uma vez.
+
+==========================================================================================================================
+PADRÕES CRIACIONAIS FACTORY METHOD
+==========================================================================================================================
+Define uma interface para criar um objeto, mas deixa que as subclasses decidam qual classe instanciar. Em JavaScript , isso pode ser implementado usando funções simples que retornam instâncias de diferentes classes baseadas em condições.
+
+==========================================================================================================================
+PADRÕES ESTRUTURAL ADAPTER
+==========================================================================================================================
+Permite que interfaces incompatíveis colaborem. Em JavaScript, pode ser tão simples quanto uma função que traduz ou mapeia chamadas de uma interface para outra.
+
+==========================================================================================================================
+PADRÕES ESTRUTUIRAL DECORATOR
+==========================================================================================================================
+Adiciona responsabilidades a um objeto dinamicamente. Em JavaScript, isso pode ser feito estendendo um objeto com novas funcionalidades sem modificar o código original.
+
+==========================================================================================================================
+PADRÕES COMPORTAMENTAIS OBSERVER
+==========================================================================================================================
+Define uma depêndencia um-para-muitos entre objetos, de modo que quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
+JavaScript tem um suporte inerente para o padrão Observer através de eventos e manipuladores de eventos.
+
+==========================================================================================================================
+ARQUITETURA
+==========================================================================================================================
+A arquitetura de software é o conjunto de estruturas necessárias para entender o sistema, que inclui elementos de software, relações entre eles e propriedades desses elementos e relações.
+Abordaremos três conceitos principais.
+
+Componentes: As unidades básicas de funcionalidade no sistema. Em JavaScript, componentes podem variar de simples funções a classes complexas ou módulos.
+
+Conectores: Os meios pelos quais os componentes interagem uns com os outros.
+Isso pode incluir chamadas de função, eventos e callbacks.
+
+Configuração:
+A disposição específica de componentes e conectores. A configuração de uma aplicação JavaScript pode ser influenciada por padrões de design, framework e a necessidade de escalabilidade e manutenibilidade.
+
