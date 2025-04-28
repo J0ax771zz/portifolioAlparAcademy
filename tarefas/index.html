@@ -39,17 +39,17 @@
       <!--Ínicio da section filters-->
       <section class="filters">
         <label class="checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" ng-model="showCompletedOnly" />
           <span></span>
           Completas
         </label>
         <label class="checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" ng-model="showIncompletedOnly" />
           <span></span>
           Incompletas
         </label>
         <label class="checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" ng-model="showTodayOnly" />
           <span></span>
           Para hoje
         </label>
@@ -59,7 +59,11 @@
     <!--Fim do Header-->
     <!--Ínicio do Main-->
     <main id="content">
-      <article ng-repeat="task in tasks" class="task" ng-class="{'checked': task.checked}">
+      <article
+        ng-repeat="task in filteredTasks() | orderBy: 'checked' "
+        class="task"
+        ng-class="{'checked': task.checked}"
+      >
         <label class="checkbox">
           <input
             type="checkbox"
@@ -68,14 +72,16 @@
           />
           <span></span>
           <h3 ng-bind="task.title">Nome da tarefa</h3>
-          <p class="date" ng-bind="task.dateStr"></p>
+          <p class="date" ng-bind="task.date | date: 'dd/MM/yyyy'"></p>
         </label>
         <button type="button" ng-click="deleteTask(task)">
           <span class="material-symbols-outlined"> delete </span>
         </button>
       </article>
 
-      <p ng-hide="tasks.length" class="empty">Nenhuma tarefa cadastrada</p>
+      <p ng-show="filteredTasks().length === 0" class="empty">
+        Nenhuma tarefa cadastrada
+      </p>
     </main>
     <!--Fim do Main-->
 

@@ -1038,4 +1038,37 @@ ng-class = Define ou altera dinamicamente classes CSS de um elemento com base em
 
 ng-style = Permite definir estilos CSS, inline de um elemento dinamicamente.
 
+==========================================================================================================================
+ESCOPOS
+==========================================================================================================================
+$scope é um objeto que conecta o Controller á View, armazenando dados e funções, que podem ser acessados e manipulados pela View, e permitindo que a View interaja com o Controller, garantindo a sincronização entre a interface e os dados.
 
+Existem dois tipos de escopos:
+1: Escopo de Controlador: Associado a cada instância de um controlador, e utilizado para armazenar dados específicos do controlador.
+2: Escopo Global: O escopó raiz, que pode ser acessado por qualquer parte da aplicação.
+
+Além disso, o AngularJS usa o conceito de escopo hierárquico, onde escopo filhos podem herdar e sobrescrever os dados do pai.
+
+==========================================================================================================================
+FILTROS
+==========================================================================================================================
+Os filtros são formas de formatar e transformar o conteúdo dinamicamente no Angular. São usados dentro de expressões, usando o caractere pipe (|) para formatar com o filtro escolhido.
+Além de transformar texto, também pode ser usado para ordenar listas, filtrar conteúdo e mais!
+
+currency = Formata um número para o formato de moeda, possui customização de símbolo monetário.
+
+date = Formata uma data de acordo com o formato especificado.
+
+filter = Seleciona um subconjunto de itens de um array e retorna o array filtrado.
+
+json = Seleciona um subconjunto de itens de um array e retorna o array filtrado.
+
+limitTo = Cria um novo array ou string contendo apenas um número especificado de elementos ou carácteres.
+
+lowerCase = Converte uma string para minúsculo.
+
+upperCase = Converte uma string para maiúsculo.
+
+number = Formata um número como texto.
+
+orderBy = Ordena um array de acordo com uma expressão de ordenação.
