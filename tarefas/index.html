@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="taskModule" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Lista de tarefas</title>
+  </head>
+  <body ng-controller="TaskController">
+    <!--Ínicio do Header-->
+    <header id="header">
+      <!--Ínicio da section title-->
+      <section class="title">
+        <h1>Lista de tarefas</h1>
+        <button type="button" ng-click="toggleModal()">
+          <span class="add">
+            <span class="material-symbols-outlined"> add </span>
+          </span>
+          Adicionar uma tarefa
+        </button>
+      </section>
+      <!--Fim da section title-->
+      <!--Ínicio da section filters-->
+      <section class="filters">
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span></span>
+          Completas
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span></span>
+          Incompletas
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span></span>
+          Para hoje
+        </label>
+      </section>
+      <!--Fim da section filters-->
+    </header>
+    <!--Fim do Header-->
+    <!--Ínicio do Main-->
+    <main id="content">
+      <article ng-repeat="task in tasks" class="task" ng-class="{'checked': task.checked}">
+        <label class="checkbox">
+          <input
+            type="checkbox"
+            ng-model="task.checked"
+            ng-change="toggleCheckdTask()"
+          />
+          <span></span>
+          <h3 ng-bind="task.title">Nome da tarefa</h3>
+          <p class="date" ng-bind="task.dateStr"></p>
+        </label>
+        <button type="button" ng-click="deleteTask(task)">
+          <span class="material-symbols-outlined"> delete </span>
+        </button>
+      </article>
+
+      <p ng-hide="tasks.length" class="empty">Nenhuma tarefa cadastrada</p>
+    </main>
+    <!--Fim do Main-->
+
+    <!--Ínicio do Modal-->
+    <aside ng-if="modalActive" class="modal-container">
+      <button class="giant-close-button" ng-click="toggleModal()"></button>
+      <div class="modal">
+        <button ng-click="toggleModal()" class="close" type="button">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
+        <h2>Adicionar uma tarefa</h2>
+        <form ng-submit="handleSubmitAddTask()">
+          <label>
+            <p>Nome</p>
+            <input
+              type="text"
+              placeholder="Nome da tarefa"
+              ng-model="taskInput.title"
+            />
+          </label>
+          <label>
+            <p>Data</p>
+            <input type="date" ng-model="taskInput.date" />
+          </label>
+          <button class="send" type="submit">Adicionar</button>
+        </form>
+      </div>
+    </aside>
+    <!--Fim do Modal-->
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

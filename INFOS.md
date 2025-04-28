@@ -985,3 +985,57 @@ Isso pode incluir chamadas de função, eventos e callbacks.
 Configuração:
 A disposição específica de componentes e conectores. A configuração de uma aplicação JavaScript pode ser influenciada por padrões de design, framework e a necessidade de escalabilidade e manutenibilidade.
 
+==========================================================================================================================
+MODÚLOS
+==========================================================================================================================
+Organizam o código, separando lógicas e permitindo a injelção de dependências, permitindo a construção de páginas complexas e de forma muito mais fácil.
+
+Eles são definidos com a função angular.module, onde se especifica o nome do módulo e suas dependências.
+
+==========================================================================================================================
+CONTROLADORES
+==========================================================================================================================
+Os controladores, ou controllers, tem o papel crucial na interação entre a view e o model, funcionando como intermediário, abrigando a lógica de negóciosda aplicação web.
+
+Os controladores são escritos no JavaScript, juntamente dos módulos.
+
+==========================================================================================================================
+EXPRESSÕES
+==========================================================================================================================
+No AngularJS, as expressões sçao trechos de código JavaScript inseridos no HTML.
+
+Por exemplo, em {{'yet' + '!'}}, ocorre uma concatenação.
+
+Você também pode usar variáveis, realizar cálculos matemáticos e até criar ou atualizar valores diretamente nas expressões.
+
+==========================================================================================================================
+DIRETIVAS
+==========================================================================================================================
+Diretivas são a forma que o Angular se localiza no seu  documento HTML.
+
+São atributos ou elementos especiais usados para esconder o HTML, adicionando comportamento ou funcionalidades à interface. Elas permitem manipular o DOM, criar componentes reutilizáveis, aplicar lógica condicional e interagir com os dados de maneira eficiente.
+
+Os elementos são iniciados por ng-, e falaremos sobre alguns deles a seguir
+
+ng-app = define a raiz da aplicação AngularJS e auto-inicializa a aplicação quando a página é carregada.
+
+ng-controller = Associa um controlador a uma parte específica do DOM, permitindo que o controlador manipule os dados e lógicas dentro desse escopo.
+
+ng-bind = O uso do ng-bind substitui {{ exemplo }} para inserir o valor de uma expressão AngularJS, evitando que o valor apareça antes da tela ser totalmente carregada, ou em caso de erro, melhorando a experiência do usuário.
+
+ng-model = Realiza a vinculação de dados bidirecional (two-way-binding) entre os elementos de entrada de formulário no HTML e o modelo no $scope. Usado em inputs, selects e textareas.
+
+ng-repeat = Define um loop semelhante ao for em nossa aplicação.
+
+ng-clic = Define um evento de clique em um botão, e devemos passar uma função para essa diretiva.
+
+ng-if = Remove ou cria um elemento do DOM baseado na verdade do valor de uma expressão.
+
+ng-show/ng-hide = Mostra ou esconde um elemento baseado na verdade do valor de uma expressão.
+Diferente do ng-if, não remove o elemento. Apenas altera sua visibilidade.
+
+ng-class = Define ou altera dinamicamente classes CSS de um elemento com base em uma expressão, utilzando um objeto onde as propriedades são os nomes das classes e os valores true ou false determinam se a classe será aplicada.
+
+ng-style = Permite definir estilos CSS, inline de um elemento dinamicamente.
+
+
