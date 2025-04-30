@@ -35,3 +35,12 @@ h1 {
 .btn-delete-user:hover{
   opacity: 1;
 }
+
+.btn-send-modal{
+  opacity: 1;
+  transition: 0.3s
+}
+
+.btn-send-modal:disabled{
+  opacity: 0.5;
+}

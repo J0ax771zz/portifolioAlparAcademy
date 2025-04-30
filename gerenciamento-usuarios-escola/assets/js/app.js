@@ -3,26 +3,35 @@ app
     $scope.usuarios = UsuarioService.listar();
     $scope.usuarioInput = {
       nome: "",
+      email: "",
       tipo: "",
     };
+    $scope.isSalvando = false;
+    $scope.mensagem = "";
 
     $scope.addNewUser = () => {
-      const nome = $scope.usuarioInput.nome;
-      const tipo = $scope.usuarioInput.tipo;
-      if (!nome || !tipo) return;
+      const { nome, email, tipo } = $scope.usuarioInput;
+      if (!nome || !email || !tipo) return;
 
-      UsuarioService.adicionar(nome, tipo);
-      $scope.usuarios = UsuarioService.listar();
+      $scope.isSalvando = true;
+      $scope.mensagem = "";
 
-      $scope.usuarioInput = {
-        nome: "",
-        tipo: "",
-      };
-      
-      var modal = bootstrap.Modal.getInstance(
-        document.getElementById("addUserModal")
-      );
-      modal.hide();
+      UsuarioService.adicionar(nome, email, tipo).then(() => {
+        $scope.usuarios = UsuarioService.listar();
+
+        $scope.mensagem = "Usuário cadastrado com sucesso";
+
+        // Limpa os dados e o estado do formulário
+        $scope.usuarioInput = {};
+        $scope.isSalvando = false;
+
+        var modal = bootstrap.Modal.getInstance(
+          document.getElementById("addUserModal")
+        );
+        modal.hide();
+
+        $scope.$apply();
+      });
     };
 
     $scope.removeUser = (usuarioSelecionado) => {
@@ -38,5 +47,20 @@ app
         $scope.usuarios = UsuarioService.listar();
       }
     };
+
+    // Evento para resetar modal ao abrir
+    const modal = document.getElementById("addUserModal");
+    modal.addEventListener("show.bs.modal", function () {
+      $scope.usuarioInput = {};
+      $scope.mensagem = "";
+      $scope.isSalvando = false;
+
+      if ($scope.form) {
+        $scope.form.$setPristine();
+        $scope.form.$setUntouched();
+      }
+
+      $scope.$apply();
+    });
   })
   .controller("UsuariosController", function ($scope) {});

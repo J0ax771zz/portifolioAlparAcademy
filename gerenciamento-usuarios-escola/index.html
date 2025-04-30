@@ -53,13 +53,19 @@
         <table
           class="table table-sm table-dark table-hover table-striped table-bordered border-success text-center align-middle"
         >
-          <button type="button" class="btn btn-primary my-2 py-2 btn-add-user" data-bs-toggle="modal" data-bs-target="#addUserModal">
+          <button
+            type="button"
+            class="btn btn-primary my-2 py-2 btn-add-user"
+            data-bs-toggle="modal"
+            data-bs-target="#addUserModal"
+          >
             <span class="material-symbols-outlined"> add </span>
             Add user
           </button>
           <thead class="table-dark">
             <tr>
               <th>Nome</th>
+              <th>Email</th>
               <th>Tipo</th>
               <th>Data de Cadastro</th>
               <th>Ações</th>
@@ -70,56 +76,143 @@
               ng-repeat="usuario in usuarios | filter: filtro | filter: {tipo:filtroTipo} | orderBy: 'nome'"
             >
               <td ng-bind="usuario.nome | uppercase"></td>
+              <td ng-bind="usuario.email"></td>
               <td ng-bind="usuario.tipo"></td>
               <td ng-bind="usuario.dataCadastro"></td>
               <td>
-                <button type="button" class="btn btn-danger btn-delete-user w-100" ng-click="removeUser(usuario)">
-                  <span class="material-symbols-outlined">
-                    delete
-                  </span>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-delete-user w-100"
+                  ng-click="removeUser(usuario)"
+                >
+                  <span class="material-symbols-outlined"> delete </span>
                   Delete
                 </button>
               </td>
             </tr>
             <tr>
-              <th colspan="2">Total de usuários</th>
-              <td class="text-left" colspan="2" ng-bind="usuarios.length"></td>
+              <th colspan="4">Total de usuários</th>
+              <td colspan="2" ng-bind="usuarios.length"></td>
             </tr>
           </tbody>
         </table>
         <!--Fim da tabela-->
 
         <!--Ínicio do Modal-->
-        <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div
+          class="modal fade"
+          id="addUserModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  New message
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
               <div class="modal-body">
-                <form ng-submit="addNewUser()">
+                <form name="form" ng-submit="addNewUser()">
                   <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Nome:</label>
-                    <input type="text" class="form-control" id="addUserModalName" ng-model="usuarioInput.nome" required>
+                    <label for="addUserModalName" class="col-form-label"
+                      >Nome:</label
+                    >
+                    <input
+                      type="text"
+                      name="nome"
+                      class="form-control"
+                      id="addUserModalName"
+                      ng-model="usuarioInput.nome"
+                      ng-required="true"
+                      ng-minlength="3"
+                    />
+                    <span
+                      class="text-danger"
+                      ng-show="form.nome.$touched && form.nome.$error.required"
+                    >
+                      Nome é obrigatório.
+                    </span>
+                    <span
+                      class="text-danger"
+                      ng-show="form.nome.$touched && form.nome.$error.minlength"
+                    >
+                      O nome deve ter pelo menos 3 caracteres.
+                    </span>
                   </div>
                   <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Tipo</label>
-                    <select  class="form-select" ng-model="usuarioInput.tipo" required>
+                    <label for="addUserModalEmail" class="col-form-label"
+                      >Email:</label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      id="addUserModalEmail"
+                      ng-model="usuarioInput.email"
+                      ng-required="true"
+                      ng-pattern="/^[\w\.-]+@[\w\.-]+\.\w{2,}$/"
+                    />
+                    <span
+                      class="text-danger"
+                      ng-show="form.email.$touched && form.email.$error.required"
+                    >
+                      Email é obrigatório.
+                    </span>
+                    <span
+                      class="text-danger"
+                      ng-show="form.email.$touched && form.email.$error.pattern"
+                    >
+                      Email inválido.
+                    </span>
+                  </div>
+                  <div class="mb-3">
+                    <label for="addUserModalType" class="col-form-label"
+                      >Tipo</label
+                    >
+                    <select
+                      class="form-select"
+                      name="tipo"
+                      ng-model="usuarioInput.tipo"
+                      id="addUserModalType"
+                      ng-required="true"
+                    >
                       <option value="Aluno">Aluno</option>
                       <option value="Professor">Professor</option>
                     </select>
+                    <span
+                      class="text-danger"
+                      ng-show="form.tipo.$touched && form.tipo.$error.required"
+                    >
+                      Tipo é obrigatório.
+                    </span>
                   </div>
-                  <button type="submit" class="btn btn-primary">Salvar</button>
+                  <button
+                  type="submit"
+                  class="btn btn-primary btn-send-modal"
+                  ng-disabled="form.$invalid || isSalvando"
+                  >
+                    <span ng-if="!isSalvando">Cadastrar</span>
+                    <span ng-if="isSalvando">Carregando...</span>
+                  </button>
+
+                  <p class="text-success mt-2" ng-if="mensagem">
+                    {{ mensagem }}
+                  </p>
                 </form>
               </div>
-              <div class="modal-footer">
-              </div>
+              <div class="modal-footer"></div>
             </div>
           </div>
         </div>
         <!--Fim do Modal-->
-
       </div>
     </div>
     <!--Fim do container-->

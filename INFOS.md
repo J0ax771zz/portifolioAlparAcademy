@@ -1096,3 +1096,88 @@ Como funciona:
 1: O Angular cria e gerencia instâncias das dependências.
 2. Quando um componente ou serviço precisa de uma dependência, o Angular a fornece automaticamente no momento da criação.
 3. A dependência pode ser especificada no construtor do componente ou serviço, e o Angular cuida da criação e injeção.
+
+
+==========================================================================================================================
+FORMULÁRIOS
+==========================================================================================================================
+O AngularJS fornerce uma abordagem poderosa e flixível para trabalhar com formulários e inputs, facilitando a validação, o controle de estado e a vinculação de dados.
+
+Data Binding
+Two-Way Data Binding 
+O AngularJs usa a vinculação de dados bidirecional para sincronizar os dados entre o modelo (scope) e a view (inputs do formulário). 
+Quando um usuário modifica um input no formulário, o modelo $scope é automaticamente atualizado, e qualquer mudança no modelo é imediatamente refletida na view.
+
+.ng-model
+A diretiva ng-model é usada para aplicar a vinculação de dados bidirecional a elementos de formulário HTML, como <input>, <select> e <textarea>.
+
+Ela garante que o valor do HTML esteja sempre sincronizado com a propriedade do $scope correspondente.
+
+==========================================================================================================================
+VALIDAÇÕES INTEGRADAS
+==========================================================================================================================
+
+ng-required = Define um input como obrigatório.
+ng-minlength = Define uma quantidade mínima de caracteres para um input.
+ng-maxlength = Define uma quantidade máxima de caracteres para um input.
+ng-pattern = Serve para definir um padrão de REGEX para validar um input.
+
+FEEDBACK VISUAL
+
+ng-valid = Classe aplicada para identificar um campo válido.
+ng-invalid = Classe aplciada para identificar um campo inválido.
+ng-dirty = Classe aplicada para identificar um campo que teve seu valor alterado de alguma forma.
+ng-pristine = Classe aplicada para identificar um campo que ainda não foi alterado.
+ng-touched = Classe aplicada para identificar um campo que já teve foco.
+ng-untouched = Classe aplicada para identificar um campo que ainda não foi focado.
+
+OBJETOS
+Cada input em um formulário AngularJS tem um objeto $error associado, que contém chaves booleanas para cada regra de validação.
+
+Isso permite verificar facilmente se um campo específico passou ou falhou em uma validação particular.
+
+ESTADOS
+O AngularJS rastreia o estado de formulários e inputs usando propriedades como $dirty, $pristine, $valid, e $invalid.
+
+Essas propriedades facilitam a implementação de lógica condicional baseada no estado do formulário ou de inputs específicos, como desabilitar o botão de submissão até que o formulário sejá válido.
+
+
+NG-SUBMIT
+A diretiva n-submit permite definir uma função a ser chamada quando o formulário é submetido. Combinada com a propriedade formulário, $valid do ng-submit pode ser usada para prevenir a submissão de formulários inválidos.
+
+==========================================================================================================================
+AJAX
+==========================================================================================================================
+No AngularJS, AJAX siginifica Asynchronous JavaScript and XML, é amplamente utilizado para comunicação assíncrona com servidores.
+
+AJAX permite que a página web solicite dados adicionais do servidor, sem recarregar a página, melhorando a experiência do usuário ao tornar as aplicações web mais rápidas e interativas.
+
+Angular JS simplifica o uso de AJAX com  o serviço poderosa para realizar solicitações HTTP. O serviço $http, que oferece uma api $http do AngularJs é uma abstração sobre o objeto XMLHttpRequest do JavaScript para realizar solicitações HTTP.
+
+Ele retorna uma "promise", que é um objeto utilizado para operações assíncronas. Uma promise representa um valor que pode estar disponível agora, no futuro ou nunca.
+
+==========================================================================================================================
+PROMISES
+==========================================================================================================================
+
+As promises são uma parte central da programação assíncrona no AngularJS, especialmente quando se trata de operações como solicitações AJAX, onde o resultado ou a conclusão da operação não é imediatamente conhecido
+
+Uma promise tem três estados:
+Pending: Estado inicial, não concluido e não rejeitado 
+Fulfilled: A operação foi concluída com sucesso.
+Rejeected: A operação falhou.
+
+O serviço $http utiliza promises, permitindo que você anexe callbacks para os casos de sucesso (fulfilled) e falha(rejected) usando os métodos .then(), e catch().
+
+Isso proporciona uma maneira muito mais limpa e organizada de lidar com operações assíncronas em comparação com callbacks aninhados.
+
+Vantagem das Promises
+
+Código Limpo
+Evita o "callback hell" ao permitir encadear operações assíncronas de maneira mais legível
+
+Tratamento Simplificado
+Com o .catch(), você pode capturar erros de várias promises encadeadas em um único local.
+
+Sincronia
+Utilizando o Promise.all(), você pode aguardar a conclusão de múltiplas promises antes de prosseguir mesme que elas sejam assíncronas
