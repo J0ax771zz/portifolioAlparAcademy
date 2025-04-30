@@ -1,15 +1,42 @@
-const app = angular.module("usersModule", []);
+app
+  .controller("AppController", function ($scope, $filter, UsuarioService) {
+    $scope.usuarios = UsuarioService.listar();
+    $scope.usuarioInput = {
+      nome: "",
+      tipo: "",
+    };
 
-app.controller("AppController", function ($scope, $filter) {
-    $scope.usuarios = [
-      {nome: "João", tipo: "Aluno", dataCadastro: new Date().toLocaleDateString()},
-      {nome: "Pedro", tipo: "Aluno", dataCadastro: new Date().toLocaleDateString()},
-      {nome: "Carlos", tipo: "Aluno", dataCadastro: new Date().toLocaleDateString()},
-      {nome: "Álvaro", tipo: "Professor", dataCadastro: new Date().toLocaleDateString()},
-      {nome: "Felipe", tipo: "Professor", dataCadastro: new Date().toLocaleDateString()},
-      {nome: "Gobbato", tipo: "Professor", dataCadastro: new Date().toLocaleDateString()},
-    ];
-}).controller("UsuariosController", function($scope) {
-  
-});
+    $scope.addNewUser = () => {
+      const nome = $scope.usuarioInput.nome;
+      const tipo = $scope.usuarioInput.tipo;
+      if (!nome || !tipo) return;
 
+      UsuarioService.adicionar(nome, tipo);
+      $scope.usuarios = UsuarioService.listar();
+
+      $scope.usuarioInput = {
+        nome: "",
+        tipo: "",
+      };
+      
+      var modal = bootstrap.Modal.getInstance(
+        document.getElementById("addUserModal")
+      );
+      modal.hide();
+    };
+
+    $scope.removeUser = (usuarioSelecionado) => {
+      const index = $scope.usuarios.findIndex(
+        (u) =>
+          u.nome === usuarioSelecionado.nome &&
+          u.tipo === usuarioSelecionado.tipo &&
+          u.dataCadastro === usuarioSelecionado.dataCadastro
+      );
+
+      if (index !== -1) {
+        UsuarioService.remover(index);
+        $scope.usuarios = UsuarioService.listar();
+      }
+    };
+  })
+  .controller("UsuariosController", function ($scope) {});

@@ -111,7 +111,10 @@
       </div>
     </aside>
     <!--Fim do Modal-->
-
-    <script src="./assets/js/app.js"></script>
+    <script>
+      window.app = angular.module("taskModule", []);
+    </script>
+    <script src="./assets/js/tasks.service.js"></script>
+    <script src="./assets/js/tasks.controller.js"></script>
   </body>
 </html>

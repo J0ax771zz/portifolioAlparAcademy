@@ -1027,7 +1027,7 @@ ng-model = Realiza a vinculação de dados bidirecional (two-way-binding) entre 
 
 ng-repeat = Define um loop semelhante ao for em nossa aplicação.
 
-ng-clic = Define um evento de clique em um botão, e devemos passar uma função para essa diretiva.
+ng-click = Define um evento de clique em um botão, e devemos passar uma função para essa diretiva.
 
 ng-if = Remove ou cria um elemento do DOM baseado na verdade do valor de uma expressão.
 
@@ -1072,3 +1072,27 @@ upperCase = Converte uma string para maiúsculo.
 number = Formata um número como texto.
 
 orderBy = Ordena um array de acordo com uma expressão de ordenação.
+
+==========================================================================================================================
+SERVICES
+==========================================================================================================================
+Services são objetos singleton usados para corganizar e compartilhar código e dados na aplicação. Eles separaram a lógica de negócios da visualização e controle, podendo ser injetados em controllers, diretivas, filtros e outros services, promovendo modularidade e reutilização de funcionalidades.
+
+Criação e uso:
+.factory = É uma maneira comm de criar um service. Ele recebe um nome e uma função que define o serviço. A função retorna um objeto que representa o servço e suas funcionalidades.
+
+.service = É simliar ao .factory mas, ao invés de trabalhar com uma função que retorna o objetom trabalha-se com uma função contrutora.
+
+.provider = É o mais flexível dos três permitindo configurar o service antes da aplicação ser inicializada. Ele é útil quando você precisa de uma configuração inicial para o seu serviço.
+
+==========================================================================================================================
+INJEÇÃO DE DEPENDÊNCIAS
+==========================================================================================================================
+A injeção de dependências no Angular é um padrão de design que permite que as dependências (como serviços, funções e objetos) sejam passadas automaticamente para um componente ou serviço, em vez de serem criadas diretamente dentro deles. Isso melhora a modularidade e facilita a manutenção do código.
+
+No Angular, a injeção de dependência é configurada por meio do injetor, e é frequentamente utilizada em serviços, controllers, directives e components.
+
+Como funciona: 
+1: O Angular cria e gerencia instâncias das dependências.
+2. Quando um componente ou serviço precisa de uma dependência, o Angular a fornece automaticamente no momento da criação.
+3. A dependência pode ser especificada no construtor do componente ou serviço, e o Angular cuida da criação e injeção.
